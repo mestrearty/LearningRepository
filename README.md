@@ -4,14 +4,15 @@ A principal intenção com a criação deste é de exercitar o git "manual" e cr
 
 Tecologias que serão inseridas aqui:
 
--> HTML
--> CSS
--> JS (ES6+)
--> Node.js
--> Express
--> Ajax
--> Gulp
--> JQuery
--> Bootstrap
--> React
--> VueJS
+#####-> HTML
+#####-> CSS
+#####-> JS (ES6+)
+#####-> Node.js
+#####-> Express
+#####-> Ajax
+#####-> Gulp
+#####-> JQuery
+#####-> Bootstrap
+#####-> React
+#####-> VueJS
+#####-> Expressões Regurares
