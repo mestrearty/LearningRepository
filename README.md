@@ -7,6 +7,7 @@ Tecologias que serão inseridas aqui:
 ##### -> HTML
 ##### -> CSS
 ##### -> JS (ES6+)
+##### -> DOM
 ##### -> Node.js
 ##### -> Express
 ##### -> Ajax
