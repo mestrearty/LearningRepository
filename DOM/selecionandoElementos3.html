@@ -31,7 +31,15 @@
         <button>Pesquisar</button>
     </form>
     <script>
-        // ...
+    console.log(document.forms);//HtmlCollection
+    console.log(document.forms[0]);//Html
+    console.log(document.getElementsByName('pesquisa'));//NodeList
+    console.log(document.getElementsByTagName('form'));//HtmlCollection
+    console.log(document.pesquisa)//Html
+    console.log(document.pesquisa.q)//pega a subtag de nome q da tag de nome pesquisa
+     document.pesquisa.q.value='Linux'
+     document.pesquisa.hl.value='pt-br'
+
     </script>
 </body>
 
