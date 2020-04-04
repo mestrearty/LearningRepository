@@ -16,8 +16,14 @@
         </ul>
     </div>
     <script>
-        // ...
-    </script>
+        const lista = document.querySelector('#compras');
+
+        //somente leitura
+        console.log(lista.attributes);
+        console.log(lista.attributes[1]);
+        console.log(lista.attributes.destino);
+        console.log(lista.attributes['data-urgencia']);
+        </script>
 </body>
 
 </html>
