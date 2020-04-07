@@ -4,7 +4,7 @@ Estilo de arquitetura de software utilizada para definir um "padrão de comunica
 
 Esse artigo é um "resumo" pessoal, que fiz para poder reforçar alguns conceitos na minha mente, e manter também para consulta. O conhecimento do mesmo foi obtido para desenvolvimento de uma API para um projeto de DTV na academia, e espero que seja útil para outras pessoas.
 
-###### O REST trabalha em conjunto com a estrutura do HTTP, logo é importante entender um pouco mais sobre o mesmo antes de aprofundar em REST.
+#### O REST trabalha em conjunto com a estrutura do HTTP, logo é importante entender um pouco mais sobre o mesmo antes de aprofundar em REST.
 
 Quando digitamos em um navegador 'www.google.com', disparamos uma mensagem de padrão, algo como "me de o google.com" na rede. Assim como podemos pedir para que "nos de", podemos pedir também que "enviemos" algo, "apague aquele nude", "altera a planilha", e por ai vai. Logo, o http pede que nós venhamos a definir qual a nossa ação, ou seja um verbo; GET, POST, DELETE, entre outros.
 
