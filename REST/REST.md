@@ -96,6 +96,8 @@ A baixo você ve alguns valores convencionais. Lembre-se de ficar atento, que ap
 
 ## 5XX Erros originados no Servidor
 
+É, eu coloquei BEM GRANDE pra tu decorar essa porquera. Eu tenho um papel A4 escrito a mão na minha parede, só pra bater o olho e bater a depressão, digo, recordar até fixar.
+
 ## Códigos mais comuns
 
 Alguns exemplos:
