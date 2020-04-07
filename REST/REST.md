@@ -2,6 +2,8 @@
 
 Estilo de arquitetura de software utilizada para definir um "padrão de comunicação" computacional em serviços web. Em um resumo "grosso" é um padrão utilizado em requisições http para o transporte de mensagens. O http define como as mensagens devem ser trafegadas, mas não define a estrutura, formato e afins. Logo, O REST, define bem como deve ser estruturado as mensagens. Se você não entendeu nada, tudo bem, eu também relendo o que escrevi eu não entendi. Agora se já entendeu, ótimo, mas vamos que tem mais texto a baixo.
 
+Esse artigo é um "resumo" pessoal, que fiz para poder reforçar alguns conceitos na minha mente, e manter também para consulta. O conhecimento do mesmo foi obtido para desenvolvimento de uma API para um projeto de DTV na academia, e espero que seja útil para outras pessoas.
+
 ###### O REST trabalha em conjunto com a estrutura do HTTP, logo é importante entender um pouco mais sobre o mesmo antes de aprofundar em REST.
 
 Quando digitamos em um navegador 'www.google.com', disparamos uma mensagem de padrão, algo como "me de o google.com" na rede. Assim como podemos pedir para que "nos de", podemos pedir também que "enviemos" algo, "apague aquele nude", "altera a planilha", e por ai vai. Logo, o http pede que nós venhamos a definir qual a nossa ação, ou seja um verbo; GET, POST, DELETE, entre outros.
@@ -77,25 +79,6 @@ Exemplos de campos:
 * User-Agent - fornece informaçõessobreomeioutilizadoparaacessareste endereço 
 * Accept - realiza negociação com o servidor a respeito do conteúdo aceito. • Accept-Language-negociacomoservidorqual oidiomaaserutilizadona resposta • Accept-Encoding-negociacomoservidorqualacodificaçãoaserutilizada naresposta • Connection-ajusta otipodeconexãocomoservidor(persistenteou não).
 
-
-## Query e Route Params 
-
-Você deve estar pensando "Nossa que legal! Eu posso pedir e mandar várias coisas. Mas como eu faço para mandar algumas informações, para que o meu pedido fique mais a minha cara?". kkk Muito tiozão dos livro didático essa frase né? Mas tudo bem, agora que tu já sacou minha ideia, vamos parar do "Params". 
-Existem várias formas de passarmos as informações que queremos em nossas requisições. Uma delas mesmo é o Header (cabeçalho) que vimos a cima. Existem outras que falarei mais a frente, mas aqui, iremos ver o "Query Params".
-
-Parâmetros de query são parâmetros que passamos em nossa URL. É como se dessemos instruções para o carneiro na hora de entregar a carta, como: "Olha entrega a carta somente para o Lucas se ele estiver com roupa azul" ou pedimos uma pizza com uva passas e sem cebola.
-
-VAMOS VOLTAR AOS VERBOS! Eu disse que você os veria novamente. Aposto que achou que não seria aqui, muito menos tão rápido né? "ACHOU ERRADO OTAKU!". 
-
-Vamos então montar nossos pedidos. Como eu quero receber uma pizza, eu vou de "GET":
-
-GET /alimento/pizza?passas=sim&cebola=não HTTP/1.1 
-
-Como você pode ver, fizemos uma "rota" (route), onde eu defino que quero pedir um alimento que será uma pizza, e defino o nome dos condimentos e se tem ou não como se fossem variáveis recebendo valore (query). Nessa abordagem de 'route params', valores de roda são definidos entre '/', como vimos '/alimento/pizza'. Pense só se no lugar de comida a gente tivesse pedindo uma bebida, seria algo como '/bebida/herba-life'. Agora outra forma de inserirmos esses valores, é através de "query params", onde após o '?', nós inserimos um parâmetro e em sua sequência um valor, onde o sinal '=' significa a associação dos parâmetro=valor. Caso tenhamos mais de um parâmetro, devemos nos atentar em utilizar '&' para os separar.
-
-Como eu disse, os Métodos (verbos) tem algumas especificidades. O GET por exemplo, ele só aceita receber valores através de cabeçalhos de route/query params, ou seja, nada de body (veremos mais a frente).
-
-?Falar de rotas no plural ou singular
 ### Códigos de Retorno
 
 Bem, vaos falar mais sobre os códigos de erro. Lembra quando eu disse que você podia me enviar um número como resposta, que eu saberia o que ele significaria? Então, é aqui que você descobre os valores deles, uma vez que "um número vale mais do que duas palavras". Certo, para facilitar o entendimento e até processamentos automáticos, números são definidos como padrões de respostas. Isto serve para facilitar e muito o entendimento do cliente (pessoa ou máquina) sobre o que aconteceu com a requisição solicitada.
@@ -145,4 +128,32 @@ Alguns exemplos:
 - 500 - Internal Server Error -> Outra resposta genérica, só que dessa vez a merda é do servidor.
 - 503 - Service Unavailabe -> Quando o serviço solicitado não está disponível;
 
-### Body e body Params
+## Query e Route Params 
+
+Você deve estar pensando "Nossa que legal! Eu posso pedir e mandar várias coisas. Mas como eu faço para mandar algumas informações, para que o meu pedido fique mais a minha cara?". kkk Muito tiozão dos livro didático essa frase né? Mas tudo bem, agora que tu já sacou minha ideia, vamos parar do "Params". 
+Existem várias formas de passarmos as informações que queremos em nossas requisições. Uma delas mesmo é o Header (cabeçalho) que vimos a cima. Existem outras que falarei mais a frente, mas aqui, iremos ver o "Query Params".
+
+Parâmetros de query são parâmetros que passamos em nossa URL. É como se dessemos instruções para o carneiro na hora de entregar a carta, como: "Olha entrega a carta somente para o Lucas se ele estiver com roupa azul" ou pedimos uma pizza com uva passas e sem cebola.
+
+VAMOS VOLTAR AOS VERBOS! Eu disse que você os veria novamente. Aposto que achou que não seria aqui, muito menos tão rápido né? "ACHOU ERRADO OTAKU!". 
+
+Vamos então montar nossos pedidos. Como eu quero receber uma pizza, eu vou de "GET":
+
+GET /alimento/pizza?passas=sim&cebola=não HTTP/1.1 
+
+Como você pode ver, fizemos uma "rota" (route), onde eu defino que quero pedir um alimento que será uma pizza, e defino o nome dos condimentos e se tem ou não como se fossem variáveis recebendo valore (query). Nessa abordagem de 'route params', valores de roda são definidos entre '/', como vimos '/alimento/pizza'. Pense só se no lugar de comida a gente tivesse pedindo uma bebida, seria algo como '/bebida/herba-life'. Agora outra forma de inserirmos esses valores, é através de "query params", onde após o '?', nós inserimos um parâmetro e em sua sequência um valor, onde o sinal '=' significa a associação dos parâmetro=valor. Caso tenhamos mais de um parâmetro, devemos nos atentar em utilizar '&' para os separar.
+
+Como eu disse, os Métodos (verbos) tem algumas especificidades. O GET por exemplo, ele só aceita receber valores através de cabeçalhos de route/query params, ou seja, nada de body (veremos mais a frente).
+
+Não há um padrão se suas rodas deverão sempre seguir "singular ou plural", mas é importante que você determine um padrão de uso. Lembre-se que outros terão que usar, e o ser humano também compreende melhor padrões.
+
+### Body 
+Por fim, logo após o nosso "header" temos nosso corpinho zenzual, o "body". Vou brincar aqui e dizer que nele a gente manda "a poha" toda.
+Eu gosto de lembrar de um episódeo de um desenho (que não me lembro qual), em que um cara passa e buzina para uma mulher de pernas "top" e grita "que pernocas em?". A mulher fica toda boba e fala "sou só pernas", abre o vestido e mostra que é literalmente uma cabeça com duas pernas. O cara corre de medo. Eu também correria de medo se todas as informações tivessem que ser passadas pelo header. Inclusive seria ruim, pois um certo método (vou deixar vocês pensarem) puxa somente as informações do header.
+
+O body vem então para basicamente que podemos inserir mais dados, que podem ser em formatos que uma aplicação está esperando, como em uma API por exemplo. Minha experiência é somente com JSON (talvez eu fale um pouco mais sobre um dia), mas existem vários outros, como XML,YAML,  etc etc. 
+
+### Conclusão
+Eu poderia aqui falar sobre várias outras coisas como Autenticação, falar mais sobre as variações dos campos do header, e bla bla bla. Mas a ideia é ser um pouco mais resumido, só para fixar alguns conceitos básicos. Talvez eu faça uma continuação a medida que eu mesmo vá aprendendo coisas novas. Abraços, espero que tenha sido útil.
+
+PS: Falei besteira em algum lugar aqui ou acha que algo legal poderia ser inserido? Me manda um e-mail, bora melhorar o texto. phventurarodrigues@gmail.com
