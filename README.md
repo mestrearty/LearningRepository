@@ -17,3 +17,4 @@ Tecologias que serão inseridas aqui:
 ##### -> React
 ##### -> VueJS
 ##### -> Expressões Regurares
+##### -> REST
