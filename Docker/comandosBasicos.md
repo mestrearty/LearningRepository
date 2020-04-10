@@ -15,10 +15,21 @@
 ##### Opções: 
 * Ver containers existentes -> -a
 
-#### Iniciar um container -> docker container start -ai \<nome_do_container>
-#### Parar um container -> docker stop \<nome_do_container>
-#### Alterar o nome de um container -> docker rename \<nome_atual> \<novo_nome>
-#### Remover um container -> docker rm \<nome_do_container>
+#### Iniciar um container -> docker container start -ai \<nome_do_container> ou <container_id>
+#### Reiniciar um container ->docker container restart \<nome_do_container>
+#### Parar um container -> docker container stop \<nome_do_container>
+#### Alterar o nome de um container -> docker container rename \<nome_atual> \<novo_nome>
+#### Remover um container -> docker container rm \<nome_do_container> (também funciona com image)
+#### Listando containers ativos-> docker container ps ou ls ou list ou docker ps
+##### Opções: 
+###### ls ou list:
+* -a -> Todos os containers
+###### Obs: o mesmo pode ser feito para imagens e volumes, basta trocar 'container' por 'image' ou 'volume'
 
+
+#### Exibindo logs de um container -> docker container logs \<nome_do_container>
+#### Configurações e detalhes do container (JSON) -> docker container inspect \<nome_do_container>
+
+#### Versão do sistema do container -> docker container exec \<nome_do_container> uname -or
 
 #### Lista o ip em que o docker responde -> docker-machine ip default
