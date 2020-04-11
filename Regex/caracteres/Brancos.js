@@ -1,4 +1,4 @@
-//Metacaracteres "Brancos", ou seja, de espaçamento 
+//Caracteres "Brancos", ou seja, de espaçamento e
 //\s - espaço, \t - tab, \n - quebra de linha
 const texto = `
 ca	r
@@ -13,5 +13,4 @@ console.log(texto.match(/ca\tr\nr/));
 console.log(texto.match(/ca\tr\nr\to/));
 console.log(texto.match(/ca\tr\nr\to\ss/));
 console.log(texto.match(/ca\tr\nr\to\ss!/));
-
 
