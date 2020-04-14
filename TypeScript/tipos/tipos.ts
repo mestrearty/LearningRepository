@@ -86,8 +86,10 @@ console.log(multiplicar(2, 2));
 //atribuindo função a variável
 
 const teste = function (a: number, b: number): boolean {
+  a = a+b;
   return true;
 }
+
 console.log(teste(1, 2));
 
 

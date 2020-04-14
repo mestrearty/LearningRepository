@@ -5,24 +5,24 @@
   variável, automaticamente ele ve qual o seu tipo, e infere que aquela variável só lidará com aquele tipo
 */
 //string
-var nome = "joão"; // ou 
-var nome2;
+let nome = "joão"; // ou 
+let nome2;
 console.log(nome);
 //numbers
-var idade = 28; // ou 
-var idade2;
+let idade = 28; // ou 
+let idade2;
 idade = 25.2;
 console.log(idade);
 //boolean
-var possuiHobbies = false; // ou 
-var possuiHobbies2;
+let possuiHobbies = false; // ou 
+let possuiHobbies2;
 console.log(possuiHobbies);
 //aceitar nulo e/ou outro valor
-var altura = 10;
+let altura = 10;
 //tipos explícitos
 //Tipo dinâmico, igual JS, varia de acordo com a nova atribuição
-var minhaIdade; // ou 
-var minhaIdade2;
+let minhaIdade; // ou 
+let minhaIdade2;
 minhaIdade = 28;
 console.log(typeof minhaIdade);
 minhaIdade = "zé";
@@ -31,11 +31,11 @@ minhaIdade = true;
 console.log(typeof minhaIdade);
 //array
 //o array também pode ter tipos definidos
-var hobbies = ["Cozinhar", "Praticar"];
+let hobbies = ["Cozinhar", "Praticar"];
 console.log(typeof hobbies);
 //tupla
 //arrays pré definidos (define quantidade, posição e tipo de cada unidade)
-var endereco = ["Av Principal", 99];
+let endereco = ["Av Principal", 99];
 console.log(endereco);
 //enums
 var Cor;
@@ -45,7 +45,7 @@ var Cor;
     Cor[Cor["Verde"] = 100] = "Verde";
     Cor[Cor["Azul"] = 101] = "Azul"; //101
 })(Cor || (Cor = {}));
-var minhaCor = Cor.Verde;
+let minhaCor = Cor.Verde;
 console.log(Cor[100]);
 console.log(minhaCor);
 //funções
@@ -62,24 +62,25 @@ function multiplicar(numA, numB) {
 }
 console.log(multiplicar(2, 2));
 //atribuindo função a variável
-var teste = function (a, b) {
+const teste = function (a, b) {
+    a = a + b;
     return true;
 };
 console.log(teste(1, 2));
-var calculo;
+let calculo;
 //calculo = digaOi;calculo(); Não pode, pq eu defini a estrutura
 calculo = multiplicar;
 console.log(calculo(5, 3));
 //objetos
-var usuario = {
+let usuario = {
     nome: "joão",
     idade: 28
 };
 console.log(usuario);
 //Exemplo
-var funcionario = {
+let funcionario = {
     supervisores: ["Lucas", "Luana"],
-    baterPonto: function (horas) {
+    baterPonto: (horas) => {
         if (horas <= 8) {
             return 'Ponto normal';
         }
@@ -88,9 +89,9 @@ var funcionario = {
 };
 console.log(funcionario.supervisores);
 console.log(funcionario.baterPonto(2));
-var funcionario2 = {
+let funcionario2 = {
     supervisores: ["Lucas", "Luana"],
-    baterPonto: function (horas) {
+    baterPonto: (horas) => {
         if (horas <= 8) {
             return 'Ponto normal';
         }
@@ -98,25 +99,25 @@ var funcionario2 = {
     }
 };
 //union types
-var nota = 10;
+let nota = 10;
 console.log(nota);
 nota = 'Agora sou texto';
 console.log(nota);
 //Checando tipos
-var valor = 10;
+let valor = 10;
 if (typeof valor === "number") {
     console.log("É um number");
 }
 else {
     console.log("Não é um number");
 }
-var contaBancaria = {
+let contaBancaria = {
     saldo: 2323,
-    depositar: function (valor) {
+    depositar(valor) {
         this.saldo += valor;
     }
 };
-var correntista = {
+let correntista = {
     nome: 'Ana Silva',
     contaBancaria: contaBancaria,
     contatos: ['34567890', '98765432']
