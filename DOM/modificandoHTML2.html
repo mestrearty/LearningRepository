@@ -12,7 +12,9 @@
         <p>Texto Inicial</p>
     </div>
     <script>
-        // ...
+        const div = document.querySelector('div');
+        div.innerHTML = 'TextoAlterado' //Altera o valor dentro da div
+        div.outerHTML = 'TextoAlterado' //Altera o valor e tags dentro da div
     </script>
 </body>
 
