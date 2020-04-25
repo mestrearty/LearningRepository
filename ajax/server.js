@@ -11,7 +11,7 @@ const storage = multer.diskStorage({
   },
 });
 
-const upload = multer({ storage }).single('arquivo');
+const upload = multer({ storage }).single("arquivo");
 
 const app = express();
 
@@ -22,7 +22,7 @@ app
 
 app.post("/upload", (req, res) => {
   res.setContentType("text/plain");
-  upload(req, res, err => {
+  upload(req, res, (err) => {
     if (err) {
       return res.end("Ocorreu um erro");
     }
@@ -30,5 +30,11 @@ app.post("/upload", (req, res) => {
   });
 });
 
+app.post("/formulario", (req, res) => {
+  res.send({
+    ...req.body,
+    id: 1,
+  });
+});
 
-app.listen(80, () => console.log("Rodando"));
+app.listen(5050, () => console.log("Rodando"));
