@@ -14,7 +14,13 @@
     <script>
         const div = document.querySelector('div');
         div.innerHTML = 'TextoAlterado' //Altera o valor dentro da div
-        div.outerHTML = 'TextoAlterado' //Altera o valor e tags dentro da div
+        //div.outerHTML = 'TextoAlterado' //Altera o valor e tags dentro da div
+        div.insertAdjacentHTML('beforebegin','<p>Antes Inicio</p>')
+        div.insertAdjacentHTML('afterbegin','<p>Depois de Inicio</p>')
+        div.insertAdjacentHTML('beforeend','<p>Antes de Acabar</p>')
+        div.insertAdjacentHTML('afterend','<p>Depois de Acabar</p>')
+
+        console.log(div.innerHTML)
     </script>
 </body>
 
