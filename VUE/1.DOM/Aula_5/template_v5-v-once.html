@@ -1,0 +1,27 @@
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<head> </head>
+<body>
+  <div id="app">
+    <p v-once>
+      {{titulo}}
+    </p>
+    <p>{{saudacao()}}</p>
+    <a v-bind:href="link">Youtube</a>
+    <p v-html="linkhtml"></p>
+  </div>
+</body>
+<script>
+  new Vue({
+    el: "#app",
+    data: {
+      titulo: "Usando VueJS!",
+      link: "http://www.youtube.com/",
+      linkhtml: '<a href="http://www.youtube.com/">Youtube</a>',
+    },
+    methods: {
+      saudacao: function () {
+        return (this.titulo = "Boa noite!");
+      },
+    },
+  });
+</script>
