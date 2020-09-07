@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/vue"></script>
+  </head>
+  <body>
+    <div id="app">
+      <ul>
+        <li v-for="(cor,indice) in cores" :tipo="cor">{{indice+1}}) {{cor}}</li>
+      </ul>
+      <template v-for="(cor, i) in cores" :key="index">
+        <p>{{i}}</p>
+        <h1>{{cor}}</h1>
+      </template>
+      <ul>
+        <li v-for="pessoa in pessoas" :key="index">{{pessoa.nome }}
+          <div v-for="(valor,chave,i) in pessoa">
+            {{i+1}}) {{chave}} = {{valor}}
+          </div>
+        </li>
+      </ul>
+      <ul>
+        <li v-for= "n in 10">{{n}}</li>
+      </ul>
+    </div>
+  </body>
+  <script>
+    new Vue({
+      el: "#app",
+      data: {
+        cores: ["vermelho", "verde", "amarelo", "azul"],
+        pessoas: [
+          { nome: "Pedro", idade: 26, peso: 59 },
+          { nome: "Luana", idade: 22, peso: 40 },
+        ],
+      },
+    });
+  </script>
+</html>
