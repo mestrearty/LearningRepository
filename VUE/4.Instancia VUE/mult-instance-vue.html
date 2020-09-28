@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mult Instance</title>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+
+<body>
+    <div id="app1">{{titulo1}} {{titulo2}}</div>
+    <div id="app2">{{titulo1}} {{titulo2}}</div>
+
+    <script>
+        new Vue({
+            el:'#app1',
+            data:{
+                titulo1: "teste 1"
+            }
+        })
+        new Vue({
+            el:'#app2',
+            data:{
+                titulo1: "teste 2"
+            }
+        })
+    </script>
+</body>
+
+</html>
