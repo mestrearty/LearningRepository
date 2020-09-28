@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matador de monstros</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue"></script>
+</head>
+
+<body>
+    <div id="app">
+        <div class="panel scores">
+            <div class="score">
+                <h1>Jogador</h1>
+                <div class="life-bar">
+                    <div class="life" :class="{danger: playerLife<20}" :style="{width: playerLife + '%' }"></div>
+                </div>
+                <div>{{ playerLife }}%</div>
+            </div>
+            <div class="score">
+                <h1>Monstro</h1>
+                <div class="life-bar">
+                    <div class="life" :class="{danger: monsterLife<20}" :style="{width: monsterLife + '%' }"></div>
+                </div>
+                <div>{{ monsterLife }}%</div>
+            </div>
+        </div>
+
+        <div class="panel result" v-if="hasResult">
+            <div v-if="monsterLife == 0" class="win">Você Ganhou!!! :)</div>
+            <div v-if="playerLife == 0" class="lose">Você perdeu! :(</div>
+        </div>
+
+        <div class="panel buttons">
+            <button v-if="running" @click="attack(false)" class="btn attack">Ataque</button>
+            <button v-if="running" @click="attack(true)" class="btn especial-attack">Spc Atk</button>
+            <button v-if="running" @click="healAndHurt()" class="btn heal">Curar</button>
+            <button v-if="running" @click="running=!running" class="btn give-up">Desistir</button>
+            <button v-if="!running" @click="startGame" class="btn new-game">Iniciar Jogo</button>
+        </div>
+        <div v-if="logs.length" class="panel logs">
+            <ul>
+                <li v-for="log in logs" :class="log.cls" class="log">{{log.text}}</li>
+            </ul>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
