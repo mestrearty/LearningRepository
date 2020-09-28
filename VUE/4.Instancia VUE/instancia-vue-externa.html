@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mult Instance</title>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+
+<body>
+    <div id="app1">
+        {{titulo1}}
+        <button @click="alterar()">Clica em mim vai</button>
+    </div>
+    <div id="app2"> {{titulo2}}
+        <button @click="alterar()">Clica em mim vai</button></div>
+
+    <script>
+        const vm1 = new Vue({
+            el: '#app1',
+            data: {
+                titulo1: "teste 1"
+            },
+            methods: {
+                alterar() {
+                    vm2.titulo2 = "Eu alterei o 2"
+                }
+            },
+        })
+
+        const vm2 = new Vue({
+            el: '#app2',
+            data: {
+                titulo2: "teste 2"
+            },
+            methods: {
+                alterar() {
+                    vm1.titulo1 = "Eu alterei o 1"
+                }
+            },
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mult Instance</title>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+
+<body>
+    <div id="app">
+        {{titulo1}} {{nova_info}}
+        <button @click="alterar()">Clica em mim vai</button>
+    </div>
+
+    <script>
+        const vm = new Vue({
+            el: '#app',
+            data: {
+                titulo1: "teste 1"
+            },
+            methods: {
+                alterar() {
+                    this.titulo1 += "!"
+                }
+            },
+        })
+
+        vm.nova_info = "olá"
+        
+    </script>
+</body>
+
+</html>
