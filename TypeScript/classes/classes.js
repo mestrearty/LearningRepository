@@ -1,83 +1,58 @@
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        if (typeof b !== "function" && b !== null)
-            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-var Data = /** @class */ (function () {
-    function Data(dia, mes, ano) {
-        if (dia === void 0) { dia = 1; }
-        if (mes === void 0) { mes = 1; }
-        if (ano === void 0) { ano = 1970; }
+"use strict";
+class Data {
+    constructor(dia = 1, mes = 1, ano = 1970) {
         this.dia = dia;
         this.mes = mes;
         this.ano = ano;
     }
-    return Data;
-}());
-var aniversario = new Data(3, 11, 1991);
+}
+const aniversario = new Data(3, 11, 1991);
 aniversario.dia = 5;
 console.log(aniversario);
-var casamento = new Data();
+const casamento = new Data();
 console.log(casamento);
 //outro meio
-var DataEsperta = /** @class */ (function () {
-    function DataEsperta(dia, mes, ano) {
-        if (dia === void 0) { dia = 1; }
-        if (mes === void 0) { mes = 1; }
-        if (ano === void 0) { ano = 1970; }
+class DataEsperta {
+    constructor(dia = 1, mes = 1, ano = 1970) {
         this.dia = dia;
         this.mes = mes;
         this.ano = ano;
     }
-    return DataEsperta;
-}());
-var aniversarioEsperto = new DataEsperta(3, 11, 1991);
+}
+const aniversarioEsperto = new DataEsperta(3, 11, 1991);
 aniversario.dia = 5;
 console.log(aniversario);
-var casamentoEsperto = new DataEsperta();
+const casamentoEsperto = new DataEsperta();
 console.log(casamento);
 //métodos
-var Produto = /** @class */ (function () {
-    function Produto(nome, preco, desconto) {
-        if (desconto === void 0) { desconto = 0; }
+class Produto {
+    constructor(nome, preco, desconto = 0) {
         this.nome = nome;
         this.preco = preco;
         this.desconto = desconto;
         this.preco = preco - desconto;
     }
-    Produto.prototype.resumo = function () {
-        return this.nome + " R$" + this.preco;
-    };
-    Produto.prototype.valorInegral = function () {
+    resumo() {
+        return `${this.nome} R$${this.preco}`;
+    }
+    valorInegral() {
         return this.preco + this.desconto;
-    };
-    return Produto;
-}());
-var papel = new Produto("Papel", 8, 1);
+    }
+}
+const papel = new Produto("Papel", 8, 1);
 console.log(papel.resumo());
-var toalha = new Produto("Toalha", 5);
+const toalha = new Produto("Toalha", 5);
 console.log(toalha.resumo());
-var Carro = /** @class */ (function () {
-    function Carro(marca, modelo, velocidadeMaxima) {
-        if (velocidadeMaxima === void 0) { velocidadeMaxima = 200; }
+class Carro {
+    constructor(marca, modelo, velocidadeMaxima = 200) {
         this.marca = marca;
         this.modelo = modelo;
         this.velocidadeMaxima = velocidadeMaxima;
         this.velocidadeAtual = 0;
     }
-    Carro.prototype.alterarVelocidade = function (delta) {
-        var novaVelocidade = this.velocidadeAtual + delta;
-        var velocidadeValida = novaVelocidade >= 0 && novaVelocidade <= this.velocidadeMaxima;
+    alterarVelocidade(delta) {
+        const novaVelocidade = this.velocidadeAtual + delta;
+        const velocidadeValida = novaVelocidade >= 0 && novaVelocidade <= this.velocidadeMaxima;
         if (velocidadeValida) {
             this.velocidadeAtual = novaVelocidade;
         }
@@ -85,30 +60,119 @@ var Carro = /** @class */ (function () {
             this.velocidadeAtual = delta > 0 ? this.velocidadeMaxima : 0;
         }
         return this.velocidadeAtual;
-    };
-    Carro.prototype.acelerar = function () {
+    }
+    acelerar() {
         return this.alterarVelocidade(8);
-    };
-    Carro.prototype.frear = function () {
+    }
+    frear() {
         return this.alterarVelocidade(-5);
-    };
-    return Carro;
-}());
-var carro = new Carro('Ford', 'K', 185);
-for (var i = 0; i < 50; i++) {
+    }
+}
+const carro = new Carro('Ford', 'K', 185);
+for (let i = 0; i < 50; i++) {
     console.log(carro.acelerar());
 }
-for (var i = 0; i < 50; i++) {
+for (let i = 0; i < 50; i++) {
     console.log(carro.frear());
 }
-var Ferrari = /** @class */ (function (_super) {
-    __extends(Ferrari, _super);
-    function Ferrari() {
-        return _super !== null && _super.apply(this, arguments) || this;
+//Herança
+class Ferrari extends Carro {
+    constructor(modelo, velocidadeMaxima) {
+        super('Ferrari', modelo, velocidadeMaxima);
     }
-    return Ferrari;
-}(Carro));
-var f40 = new Ferrari('Ferrari', 'F40', 324);
-console.log(f40.marca + " " + f40.modelo);
-console.log(f40.acelerar);
+    acelerar() {
+        return this.alterarVelocidade(20);
+    }
+    frear() {
+        return this.alterarVelocidade(-15);
+    }
+}
+const f40 = new Ferrari('F40', 324);
+console.log(`${f40.marca} ${f40.modelo}`);
+console.log(f40.acelerar());
 console.log(f40.frear());
+//Getters & Setters
+class Pessoa {
+    constructor() {
+        this._idade = 0;
+    }
+    get idade() {
+        return this._idade;
+    }
+    set idade(valor) {
+        if (valor >= 0 && valor <= 120) {
+            this._idade = valor;
+        }
+    }
+}
+const pessoa1 = new Pessoa;
+pessoa1.idade = 10;
+console.log(pessoa1.idade);
+pessoa1.idade = -10;
+console.log(pessoa1.idade);
+//Static
+class Matematica {
+    static areaCirc(raio) {
+        return this.PI * raio * raio;
+    }
+}
+Matematica.PI = 3.1416;
+/*
+const m1 = new Matematica();
+m1.PI = 4.2
+console.log(m1.areaCirc(4))
+
+const m2 = new Matematica();
+console.log(m2.areaCirc(4))
+*/
+console.log(Matematica.areaCirc(4));
+//Abstract
+class Calculo {
+    constructor() {
+        this.resultado = 0;
+    }
+    getResultado() {
+        return this.resultado;
+    }
+}
+class Soma extends Calculo {
+    executar(...numeros) {
+        this.resultado = numeros.reduce((t, a) => t + a);
+    }
+}
+class Multiplicacao extends Calculo {
+    executar(...numeros) {
+        this.resultado = numeros.reduce((t, a) => t * a);
+    }
+}
+let c1 = new Soma();
+c1.executar(2, 3, 4, 5);
+console.log(c1.getResultado());
+c1 = new Multiplicacao();
+c1.executar(2, 3, 4, 5);
+console.log(c1.getResultado());
+//Singleton
+class Unico {
+    constructor() { }
+    static getInstance() {
+        return Unico.instance;
+    }
+    agora() {
+        return new Date;
+    }
+}
+Unico.instance = new Unico;
+//const errado =new Unico()
+console.log(Unico.getInstance().agora());
+//Ready Only
+class Aviao {
+    constructor(modelo, prefixo) {
+        this.prefixo = prefixo;
+        this.modelo = modelo;
+    }
+}
+const turboHelice = new Aviao('Tu-114', 'PT-ABC');
+// turboHelice.modelo = 'DC-8'
+// turboHelice.prefixo = 'PT-DEF'
+console.log(turboHelice);
+//# sourceMappingURL=classes.js.map
