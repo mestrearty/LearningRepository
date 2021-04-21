@@ -41,6 +41,6 @@ console.log(Geometria.Areas.Retangulo(10, 20));
 //Import
 ///<reference path="geometriaCirc.ts"/>
 ///<reference path="geometriaRec.ts"/>
-console.log(GeometriaCirc.Areas.Circunferencia(10));
-console.log(GeometriaRec.Areas.Retangulo(10, 20));
+//console.log(GeometriaCirc.Areas.Circunferencia(10))
+//console.log(GeometriaRec.Areas.Retangulo(10, 20))
 //# sourceMappingURL=namespaces.js.map
