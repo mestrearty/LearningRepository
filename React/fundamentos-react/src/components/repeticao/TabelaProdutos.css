@@ -1,0 +1,20 @@
+.TabelaProdutos {
+    width: 100%
+}
+
+.TabelaProdutos {
+    font-weight: 500;
+}
+
+.TableHeader {
+    background-color: #283cae;
+    color: #fff
+}
+
+.TabelaProdutos .Par {
+    background-color: #ddd;
+}
+
+.TabelaProdutos .Impar {
+    background-color: #888;
+}
