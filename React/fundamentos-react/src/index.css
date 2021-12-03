@@ -1,0 +1,19 @@
+body {
+    background-color: #111;
+    color: #eee;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+h1, h2, h3 {
+    font-weight: 300;
+}
+
+h2, h3 {
+    font-weight: 300;
+    margin: 0;
+}
+
+.tableHead {
+  font-size: 2rem;
+}
