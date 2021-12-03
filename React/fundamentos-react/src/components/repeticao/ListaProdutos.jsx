@@ -6,7 +6,7 @@ export default (props) => {
   const tableBody = produtos.map((produto, i) => {
     console.log(i % 2 == 0 ? "Par" : "Impar");
     return (
-      <tr key={produto.id} className={i % 2 == 0 ? "Par" : "Impar"}>
+      <tr key={produto.id} className={i % 2 === 0 ? "Par" : "Impar"}>
         <th>{produto.id})</th>
         <th>{produto.nome}</th>
         <th>R$ {produto.preco}</th>
