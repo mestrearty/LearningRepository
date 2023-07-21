@@ -5,6 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "start": "tsc-watch --onSuccess \"node dist/index.js\"",
+    "production": "pm2 start dist/index.js --name appx-backend",
     "build": "tsc --build tsconfig.json",
     "watch": "tsc -w",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -20,7 +21,6 @@
     "typescript": "^5.1.6"
   },
   "dependencies": {
-    "express": "^4.18.2",
-    "tsc-watch": "^6.0.4"
+    "express": "^4.18.2"
   }
 }
