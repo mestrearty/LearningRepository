@@ -6,6 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 //Apenas Recordando Express
 const express_1 = __importDefault(require("express"));
 const alertaTerminalMiddleware_1 = __importDefault(require("./alertaTerminalMiddleware"));
+const pokemonMiddleware_1 = __importDefault(require("./pokemonMiddleware"));
 const app = (0, express_1.default)();
 const porta = 3001;
 app.listen(porta, () => {
@@ -29,7 +30,7 @@ app.get("/pokemon/pikachu", (req, res) => {
         weakness: "Ground",
     });
 });
-app.get("/pokemon/:id", (req, res) => {
-    res.send(`Pokémon Dex ${req.params.id}`);
-});
+//Pegar dados de parâmetros
+app.get("/pokemon/:id", pokemonMiddleware_1.default.get);
+app.post("/pokemon/register", pokemonMiddleware_1.default.post);
 //# sourceMappingURL=index.js.map

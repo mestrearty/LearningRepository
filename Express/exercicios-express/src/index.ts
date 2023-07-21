@@ -1,6 +1,7 @@
 //Apenas Recordando Express
 import express, { Express, Request, Response } from "express";
 import alertaMiddleware from "./alertaTerminalMiddleware";
+import pokemonMiddleware from "./pokemonMiddleware";
 
 const app = express();
 const porta = 3001;
@@ -31,6 +32,7 @@ app.get("/pokemon/pikachu", (req, res) => {
   });
 });
 
-app.get("/pokemon/:id", (req, res) => {
-  res.send(`Pokémon Dex ${req.params.id}`);
-});
+//Pegar dados de parâmetros
+app.get("/pokemon/:id", pokemonMiddleware.get);
+
+app.post("/pokemon/register", pokemonMiddleware.post);
