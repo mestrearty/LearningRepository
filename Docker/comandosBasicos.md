@@ -33,3 +33,41 @@
 #### Versão do sistema do container -> docker container exec \<nome_do_container> uname -or
 
 #### Lista o ip em que o docker responde -> docker-machine ip default
+
+
+### docker -h
+* Listar as opções do comando docker
+
+### docker run ...
+* Criar e executar um container
+
+### docker start <container-name> 
+* Executar um container
+
+###  docker stop <container-name>
+* Encerrar a execução de um container
+
+### docker ps
+* Listar containers em execução
+
+### docker ps -a
+* Listar todos os containers
+
+### docker rm <container-name>
+* Excluir um container
+
+### docker images
+* Listar todas as imagens no PC
+
+### docker rmi <image-name>
+* Excluir uma imagem no PC
+
+### docker logs <container-name>
+*  Exibir os logs da execução do container
+
+### docker inspect <container-name>
+* Exibir todas as informações do container
+
+### docker info
+* Exibir as informações do Docker
+
