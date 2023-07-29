@@ -1,5 +1,9 @@
 "use strict";
 class Data {
+    //publico por padrão
+    dia;
+    mes;
+    ano;
     constructor(dia = 1, mes = 1, ano = 1970) {
         this.dia = dia;
         this.mes = mes;
@@ -13,6 +17,9 @@ const casamento = new Data();
 console.log(casamento);
 //outro meio
 class DataEsperta {
+    dia;
+    mes;
+    ano;
     constructor(dia = 1, mes = 1, ano = 1970) {
         this.dia = dia;
         this.mes = mes;
@@ -26,6 +33,9 @@ const casamentoEsperto = new DataEsperta();
 console.log(casamento);
 //métodos
 class Produto {
+    nome;
+    preco;
+    desconto;
     constructor(nome, preco, desconto = 0) {
         this.nome = nome;
         this.preco = preco;
@@ -44,11 +54,14 @@ console.log(papel.resumo());
 const toalha = new Produto("Toalha", 5);
 console.log(toalha.resumo());
 class Carro {
+    marca;
+    modelo;
+    velocidadeMaxima;
+    velocidadeAtual = 0;
     constructor(marca, modelo, velocidadeMaxima = 200) {
         this.marca = marca;
         this.modelo = modelo;
         this.velocidadeMaxima = velocidadeMaxima;
-        this.velocidadeAtual = 0;
     }
     alterarVelocidade(delta) {
         const novaVelocidade = this.velocidadeAtual + delta;
@@ -93,9 +106,7 @@ console.log(f40.acelerar());
 console.log(f40.frear());
 //Getters & Setters
 class Pessoa {
-    constructor() {
-        this._idade = 0;
-    }
+    _idade = 0;
     get idade() {
         return this._idade;
     }
@@ -112,11 +123,11 @@ pessoa1.idade = -10;
 console.log(pessoa1.idade);
 //Static
 class Matematica {
+    static PI = 3.1416;
     static areaCirc(raio) {
         return this.PI * raio * raio;
     }
 }
-Matematica.PI = 3.1416;
 /*
 const m1 = new Matematica();
 m1.PI = 4.2
@@ -128,9 +139,7 @@ console.log(m2.areaCirc(4))
 console.log(Matematica.areaCirc(4));
 //Abstract
 class Calculo {
-    constructor() {
-        this.resultado = 0;
-    }
+    resultado = 0;
     getResultado() {
         return this.resultado;
     }
@@ -153,6 +162,7 @@ c1.executar(2, 3, 4, 5);
 console.log(c1.getResultado());
 //Singleton
 class Unico {
+    static instance = new Unico;
     constructor() { }
     static getInstance() {
         return Unico.instance;
@@ -161,11 +171,12 @@ class Unico {
         return new Date;
     }
 }
-Unico.instance = new Unico;
 //const errado =new Unico()
 console.log(Unico.getInstance().agora());
 //Ready Only
 class Aviao {
+    prefixo;
+    modelo;
     constructor(modelo, prefixo) {
         this.prefixo = prefixo;
         this.modelo = modelo;

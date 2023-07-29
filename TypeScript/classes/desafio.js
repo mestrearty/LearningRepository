@@ -1,9 +1,10 @@
 "use strict";
 // Exercício 1 - Classe
 class Moto {
+    nome;
+    velocidade = 0;
     constructor(nome) {
         this.nome = nome;
-        this.velocidade = 0;
     }
     buzinar() {
         console.log('Toooooooooot!');
@@ -18,17 +19,12 @@ motoca.acelerar(10);
 console.log(motoca.velocidade);
 // Exercício 2 - Herança
 class Objeto2D {
-    constructor() {
-        this.base = 0;
-        this.altura = 0;
-    }
+    base = 0;
+    altura = 0;
 }
 class Retangulo extends Objeto2D {
-    constructor() {
-        super(...arguments);
-        this.base = 5;
-        this.altura = 7;
-    }
+    base = 5;
+    altura = 7;
     area() {
         return this.base * this.altura;
     }
@@ -37,9 +33,7 @@ let ret = new Retangulo();
 console.log(ret.area());
 // Exercício 3 - Getters & Setters
 class Estagiario {
-    constructor() {
-        this._primeiroNome = 'Zé';
-    }
+    _primeiroNome = 'Zé';
     get primeiroNome() {
         return this._primeiroNome;
     }
