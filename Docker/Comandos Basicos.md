@@ -1,7 +1,7 @@
-# Comandos básicos para navegar e gerir no Docker
+# Anotações Rápidas sobre Docker e Comandos básicos para navegar e gerir
 
 ### Criando um container
-#### Criar um container -> docker run   \<nome_da_imagem>
+#### Criar um container -> docker run   \nome_da_imagem
 ##### Opções: 
  * -p \<porta_da_máquina>:\<porta_da_imagem> : define porta que a máquina irá acessa a aplicação e a porta que a aplicação irá usar
  * --name \<nome_do_container> : nomeia o conteiner
@@ -9,7 +9,8 @@
  * -it : acessar o conteiner após criar
  * -v <dir_maquina>:<dir_container> : mapeia uma pasta na sua máquina com a a imagem no seu container. $(pwd) pode ser útil...
  * -d : executa em modo deamon (não fica executando no seu terminal. Fica em "segundo plano")
- 
+
+
 ### Gerenciando um container 
 #### Ver container ativos -> docker container ps
 ##### Opções: 
