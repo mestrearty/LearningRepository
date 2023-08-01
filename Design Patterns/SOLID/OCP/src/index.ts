@@ -20,7 +20,7 @@ if (type === TypeVehicle.CAR) {
 // Mas vai que alguém já implementou todo um processo em cima da nossa classe e gerando Motocas por ai,
 // Se mudássemos o código removendo a moto imagina o que acontece com outras classes e funções que as utilizam
 // Por isso o arquivo Vihicle.ts é extendido em VihicleCar.ts e VihicleMotorcycle.ts junto com suas abstrações (interfaces).
-type = TypeVehicle.MOTORCYCLE;
+type = TypeVehicle.CAR;
 if (type === TypeVehicle.CAR) {
     vehicle = new Car("Rosa", 2023, 2.0, 4, 4);
 } else if (type === TypeVehicle.MOTORCYCLE) {
