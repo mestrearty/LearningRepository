@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Selectors</title>
+    <link rel="stylesheet" href="css/tag.css">
+    <style>
+        /*seleciona todos*/
+        * {
+            background-color: black;
+            color: yellow;
+        }
+
+        /*Seleciona classe*/
+        .tag {
+            background-color: gray;
+            color: green
+        }
+
+        /*Seleciona id*/
+        #aprovados {
+            background-color: indigo;
+            color: blue;
+        }
+
+        /*Seleciona os filhos direto*/
+        #aninhado>div {
+            background-color: wheat;
+        }
+
+        /*seleciona os descendentes*/
+        #aninhado section {
+            background-color: yellowgreen;
+        }
+
+        /*seleciona todos os casos que tenha um primeiro imão */
+        p+ul {
+            background-color: turquoise;
+            font-size: 18px;
+        }
+
+        /*seleciona o primeiro irmão que encontrar, não necessariamente o próximo*/
+        p~ol {
+            background-color: teal;
+            font-size: 10px;
+        }
+
+        /*seleciona propriedades*/
+        [feira] {
+            background-color: thistle;
+            font-size: 20px;
+        }
+
+        /*Seleciona a propriedade e que tenha somente tal atributo */
+        [feira=escritorio] {
+            font-size: 5px;
+        }
+
+        /*Seleciona a propriedade e que contenha tal atributo */
+        [feira~=escritorio] {
+            font-size: 23px;
+        }
+
+        /*Seleciona a propriedade e que contenha os caracteres*/
+        [feira*=sa] {
+            font-weight: bold;
+            background-color: blue;
+        }
+
+        /*Seleciona o filho 'x' de alguém que seja do tipo especificado*/
+        span:nth-child(2) {
+            background-color: orange;
+        }
+
+        /*selecionando todos os filhos dos filhos que tenham x caracteristica*/
+        section> :nth-child(odd) {
+            background-color: pink;
+        }
+
+        /*Selecionando mais de um elemento*/
+        p,
+        ul {
+            font-weight: bold;
+        }
+
+        /*todos os descendentes*/
+        ul li {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /*Selecioando um tipo espeficico de um filho 'X' direto*/
+        section>span:nth-of-type(2) {
+            color: blue
+        }
+    </style>
+</head>
+
+<body>
+    <div class='tag'>
+        <div class='tag'>
+            <p class='tag'>1</p>
+            <ul class='tag' feira='casa'>
+                <li>Arroz</li>
+                <li>Feijão</li>
+            </ul>
+            <ul class='tag' feira='escritorio empresa'>
+                <li>Café</li>
+                <li>Água</li>
+            </ul>
+            <ol id='aprovados' class='tag'>
+                <li>Maria</li>
+                <li>Pedro</li>
+                <li>Ana</li>
+            </ol>
+            <div id='aninhado' class='tag'>
+                <div class="tag">
+                    <section class='tag'>
+                        <span class='tag'>1</span>
+                        <p class='tag'>2</p>
+                        <span class='tag' feira='escritorio'>3</span>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/tag.js"></script>
+</body>
+
+</html>
