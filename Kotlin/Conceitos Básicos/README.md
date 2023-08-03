@@ -2,8 +2,8 @@
 
 ### Pasta destinada a salvar códigos feitos inicialmente em plataforma web para estudo 
 
-Todo o código usado aqui foi executado em :
+Todo o código encontrado aqui pode ser executado individualmente em:
+
 https://play.kotlinlang.org/
 
-### Anotações
-Larguei pois o site não me permitia participar de 2 bootcamps simultaneamente
+
