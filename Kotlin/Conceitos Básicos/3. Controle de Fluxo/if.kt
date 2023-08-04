@@ -29,9 +29,4 @@ fun saudacao(dia: Boolean): String {
     }
 }
 
-fun saudacaoReduzida(dia: Boolean) =
-        if (dia) {
-            "Bom dia"
-        } else {
-            "Boa noite"
-        }
+fun saudacaoReduzida(dia: Boolean) = if (dia) "Bom dia" else "Boa noite"
