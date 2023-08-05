@@ -2,8 +2,8 @@
 const val MAX_AGE = 50 // Variável estática Global. 
 
 fun main() {
-    var currentAge = 30 // Declarando variável comum que pode ser alterada
-    val newCurrentAge: Int // Declarando variável tipada
+    var currentAge = 30 // Declarando variável comum que pode ser alterada (var)
+    val newCurrentAge: Int // Declarando variável tipada que não pode ser alterada (val)
     newCurrentAge = 40 // atribuindo valor
 
     println(currentAge)
