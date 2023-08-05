@@ -5,8 +5,20 @@ Orientação a objetos é um paradgma para que possamos abstrair melhor o proble
 Pense por exemplo em um computador. O comuptador é um objeto que é composto por vários outros objetos. Ou seja o objeto computador é formado pelo objeto placa mãe, placa de vídeo, ram e por ai vai. Esses hardwares por sua vez também tem objetos que os formam e suas características físicas. Sendo assim, na programação com orientação a objetos somos
 capazes de representar os mesmos objetos em um código pela ótica em que os observamos, separando suas características (atributos) e seus comportamentos (métodos).
 
-## Classes em Kotlin
+*******
+- Sumário
+  - [Orientação a Objetos com Kotlin](#orientação-a-objetos-com-kotlin)
+  - [Classes em Kotlin](#classes-em-kotlin)
+  - [Construtor secundário](#construtor-secundário)
+  - [Init](#init)
+  - [Encapsulamento com Get, Set e Field](#encapsulamento-com-get-set-e-field)
+  - [Enum - Enumerar](#enum---enumerar)
+  - [Data Class](#data-class)
 
+******
+
+
+## Classes em Kotlin
 Em kotlin dizemos que é uma classe com a palavra reservada que precede `class`. Além disso seguimos o padrão de que toda classe deve começar com a primeira letra maíuscula `Car`, `Store`, `Pokemon`.
 
 ```kotlin
