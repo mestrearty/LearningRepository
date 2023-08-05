@@ -210,7 +210,6 @@ fun main()
 
 Veja que a baixo do atributo `nome` instancio o método `get` e `set` que ficam diretamente associados ao `nome`. Após inserir minha regra de negócio em casa um, dentro da `main()` altero os atributos diretamente como se fosse sem um método, mas na verdade ele está sim passando pela nossa regra de negócio. Ele faz isso para facilitar a sua vida e ter que digitar menos código. Curtiu?
 
-
 [4. Set-Get-Fiel.kt](./4.Set-Get-Fiel.kt) ou direto do [Play Kotlin](https://pl.kotl.in/UfMum_nOv)
 
 ## Enum - Enumerar
@@ -228,7 +227,48 @@ fun main()
 }
 
 ```
+
 Veja que em nesse código a cima listamos os tipos que um pokémon pode assumir, e para chamar fazemos tal como fossemos chamar um atributo, mas só é possível chamar os valores definidos na classe. Da hora né? Com isso temos muitos menos erros e sempre podemos garantir que algo esteja coberto pelas possobilidades dais quais limitamos. Resumindo: Menos Ifs.
 
-
 [5.Set-Get-Fiel.kt](./5.Enum.kt) ou direto do [Play Kotlin](https://pl.kotl.in/dKU7Gl-mP)
+
+## Data Class
+
+Data Class é uma forma de declarar classes onde métodos nativos do Kotlin para classes utilizam dos valores dos atributos e métodos e não da referência de memória.
+
+O método `.equal()` é nativo de toda classe. Por mais que você não veja, o Kotlin instancia em toda nova classe. Esse método tem por funcionalidade comparar se a classe que a chama é igual a outra classe passada como parâmetro. Quando utilizamos em uma classe normal, ela compara referências de memória, ou seja, compara se estamos falando literalmente da mesma instância.
+
+Quando utilizamos o Data Class, por padrão o método `.equal()` passará a comparar o valor contído na memória, e não mais o registro.
+
+Sendo assim, observe o código:
+
+```kotlin
+
+class FormaSemData(val a: Int, val b: Int)
+
+data class FormaData(val a: Int, val b: Int)
+
+fun main() {
+    // Chamando uma classe normal
+    val fsd1: FormaSemData = FormaSemData(10, 8)
+    val fsd2: FormaSemData = FormaSemData(10, 8)
+    val fsd3: FormaSemData = fsd1
+    println(fsd1.equals(fsd2)) // false
+
+
+    // Chamando uma classe do tipo data
+    val fd1: FormaData = FormaData(10, 8)
+    val fd2: FormaData = FormaData(10, 8)
+    println(fd1.equals(fd2)) // true
+    val fd3: Formadata = fd1.copy()
+    println(fd3.equals(fd2))
+}
+```
+
+Veja que temos 2 classes que fazem a mesma coisa, recebem um parâmetro `a` e `b`. A do tipo classe normal ao utilizarmos o `.equals` compara a instância 1 (`fsd1`) com a instância 2 (`fsd2`) e retorna `falso`, pois são instâncias diferentes, ou seja, ocupam espaços diferentes na memória. Agora, quando comparamos `fsd1` e `fsd3` que foi carregado com a posição na memória de `fsd1` temos `verdadeiro`.
+
+Já em baixo quando comparamos `fd1` e `fd2` com o `.equals` que foram instanciadas com parâmetros com os mesmos valores, temos um retorno `verdadeiro`
+
+Outra coisa interessante é que `data class` possuí o método `.copy`. No código então podemos ver que no lugar de passar a referência de memória e termos 2 variáveis apontando para a mesma instância da classe, o `.copy()` copia os dados de um para outro. Podemos ver que ao comparar com `fd3` que foi copiado de `fd1` com o `fd2` temos `verdadeiro`, pois o que foi passado fora o conteúdo de `fd1` que é igual ao de `fd2`, e não a referência de memória.
+
+[6.DataClass.kt](./6.DataClass.ktt) ou direto do [Play Kotlin](https://pl.kotl.in/Yjb3m_RGc)
