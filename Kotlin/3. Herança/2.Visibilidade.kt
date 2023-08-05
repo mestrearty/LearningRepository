@@ -3,17 +3,27 @@
 // Explicação do código no readme.md na pasta "/Herança"
 
 open class Eletronico(var marca: String) {
+    protected var estado: String = "desligado"
+
+    private fun ativarCorrente() {
+        println("Recebendo energia")
+    }
+
     fun ligar() {
+        ativarCorrente()
         println("Ligando")
     }
     fun desligar() {
+        estado = "desligado"
         println("Desligando")
     }
 }
 
 class Computador(marca: String) : Eletronico(marca) {
     fun processar() {
-        println("Estou processando algo...")
+        estado = "ocupado"
+        println("Estou ${this.estado} processando algo...")
+        //ativarcorrente() -> não pode ser chamado por que é privado
     }
 }
 
@@ -23,4 +33,6 @@ fun main() {
     computador.ligar()
     computador.processar()
     computador.desligar()
+    //computador.estado -> não pode ser chamado pois é protegido
+    //computador.ativarcorrente() -> não pode ser chamado por que é privado
 }
