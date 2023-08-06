@@ -262,8 +262,56 @@ fun main() {
 https://pl.kotl.in/EFCiQzs7g
 
 ## Classes abstratas
+Nem tudo que um pai passa para seus filhos, os filhos farão da mesma forma. Para entendermos classes abstratas vamos pensar na classe pai `Mamifero`. Essa classe passa os métodos `Acordar`, `Dormir` e `Falar`. 
+
+Podemos concordar que no geral, todos os mamíferos terão o mesmo jeito de `Acordar` e `Dormir`, mas ao `Falar`, uma classe `Gato` fará "miau" e um `Cachorro` "auau". Perceba que cada filho de `Mamifero` terá sua própria fala, o que acarretaria em que toda vez que uma classe a herdasse teria que vazer um `overide`.
+
+Sendo assim, ao em vez de implementarmos o método na classe `Mamífero`, podemos dizer que toda classe que herdar `Mamifero` é capaz de `falar()`, mas precisa implementar seu próprio método `falar()`.
+
+Vejamos em código:
+
+```kotlin
+abstract class Mamifero(val nome:String) {
+
+    fun acordar(){
+        println("Acordei")
+    }
+    
+    fun dormir(){
+        println("A mimir")
+    }
+    
+    abstract fun falar()//não implementamos
+}
+
+class Gato (nome: String): Mamifero(nome){
+    override fun falar(){
+        println("${nome} diz: Me da sachê Marcia!")
+    }
+}
+
+fun main() {
+ val gato = Gato ("Link")
+ gato.acordar()
+ gato.falar()
+ gato.dormir()
+}
+```
+
+Veja que precisamos inserir na classe e no método que será abstrado o prefixo `abstract`. Perceba também que chamamos os métodos já implementados em `Mamiferos` além do nosso `override` do `falar()`.
+https://pl.kotl.in/u3tnmxzlT
 
 ## Interfaces
+Imagine que exista um contrato que permite você ser um `treinador` Pokemon. Sem esse contrato você não pode ser um `treinador`. Então, você que quer ser um treinador deve assinar esse contrato. Nesse contrato vai dizer o que você pode fazer (métodos) e quais são seus atributos como `treinador`.   
+
+Vejamos então, uma `Pessoa` resolve assinar o contrato para ser um `Treinador`. Sendo assim, ela agora deve ter um método de `capturar()` poder pegar Pokémon e outro para `batalhar()`. Além disso ela ganha um atributo `qdtInsignias`, que armazena quantas `insignias` de ginásios ela já tem.
+
+Mas agora, cada treinador terá o seu jeito de `Treinar` e `Batalhar`. Então quando a `Pessoa` assina o contrato de `Treinador` ela é obrigada a implementar.
+
+Vejamos em código:
+
+
+https://pl.kotl.in/Nr55r_xuh
 
 ## Polimorfismo
 
