@@ -343,5 +343,57 @@ Definimos com o prefisso `interface` o que será o nosso contrato. Definimos tud
 https://pl.kotl.in/Nr55r_xuh
 
 ## Polimorfismo
+Quem curte quadrinhos, mais especificamente X-man deve relembrar da mutante toda azul, a Mistica, uma polimorfa. Nossa mutante tinha o super poder de virar quem ela quisesse. Se comportar como aquela outra pessoa, mesmo ela não sendo. Mas reparem, ela só conseguia imitar outra pessoa, e não outros animais. Além disso ela só podia fazer o que uma pessoa fazia, ela não imitava os métodos únicos de um mutante como o do Magneto de controlar metal.
+
+Fiquemos em mente então com essa capacidade de "copiar tudo que uma outra pessoa é capaz de ser e ter, menos algo especial e único, que saia do escopo de ser humano" como super poderes ou memórias próprias.
+
+Com esse pensamento vamos agora pensar em uma empresa. Toda empresa tem `Funcionarios`, e esses funcionários podem exercer diferentes papéis, como `Gerente` ou `Analista`.
+
+Colocando em código, um `Gerente` e um `Analista` podem assinar o contrato (`interface`) de serem um `Funcionario`, e emplementarem todos os métodos de um `Funcionario`.
+
+E se eu perguntar a você, caso eu queira saber quanto de bonus salarial um `Gerente` e um `Funcionario` ganham, como eu faço? Criamos o contrato que todo Funcionário deve ter um atributo `salario` e o método `bonus()`.
+
+Show, então já temos como obter os valores. Mas e se eu precissasse fazer um tratamento com o bonus de cada um para depois exibir uma mensagem personalizada? Teria que mexer novamente em cada classe? :Não posso ficar toda hora mudando código... Criaria uma função para exibir o bonus do `Gerente` e uma função para do `Analista`? Mas se se eu criar a classe `Progamador` que também implementa o `Funcionario` no futuro, também terei que criar uma função só pra ele...
+
+Então sento e choro?
+
+Pensa comigo, `Gerente` é um `Funcionário` assim como `Analista` é um funcionário, o que significa que qualquer um que implementar `Funcionário` terá um `salário` e `bonus()`. Agora lembra da polimorfa Mística. Se a Mística é um `Funcionário`, ela pode agir como `Analista`, como `Gerente` ou qualquer coisa que seja implementado de `Funcionário`.
+
+Então e se a gente criasse uma "Função Mística" que se transforma no que receber? Então nós teriamos aqui um polimorfismo.
+
+Vamos de X-Código
+```kotlin
+interface Funcionario {
+    var salario: Float
+    fun bonus(): Float
+}
+
+class Gerente(override var salario: Float) : Funcionario {
+    override fun bonus(): Float {
+        return salario * 0.5f
+    }
+}
+
+class Analista(override var salario: Float) : Funcionario {
+    override fun bonus(): Float {
+        return salario * 0.3f
+    }
+}
+
+fun mostrarBonus(funcionario: Funcionario) {
+    println(funcionario.bonus())
+}
+
+fun main() {
+    val analista = Analista(2000.0f)
+    mostrarBonus(analista)
+    val gerente = Gerente(2000.0f)
+    mostrarBonus(gerente)
+}
+```
+
+Reparem que nossa função `mostrarBonus()` recebe como parâmetro uma propriedade do tipo `Funcionario`, e dentro da nossa `main()` a chamamos 2 vezes, uma passando um `analista` e outra passando um `gerente`, e ela executa, pois ambos são `Funcionario`s, e dentro da função Mística `mostrarBonus` só trabalhamos com parâmetros e métodos que sabemos que nosso polimorfo é capaz de executar, pois pertence a `Funcionário`s.
+
+https://pl.kotl.in/tpmUCiV6p
 
 ## Classe anônima
