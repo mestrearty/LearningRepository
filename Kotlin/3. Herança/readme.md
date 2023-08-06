@@ -193,6 +193,74 @@ Perceba que no código temos 3 métodos `ligarLed()` exatamente com o mesmo nome
 https://pl.kotl.in/oVs8cX5CW
 ## Object e companion object
 
+Métodos e atributos estáticos são capazes de serem acessados de uma classe sem que eles sejam instânciados.
+
+Dentro do Kotlin é possível definir métodos e funções estáticas, mas de uma forma peculiar, com o `companion objetct`. Veja um simples exemplo a baixo.
+
+``` kotlin
+class Matematica() {
+  
+    companion object {
+        val PI = 3.1415
+    }
+}
+
+fun main() {
+  
+    println(Matematica.PI)
+
+}
+```
+
+Reparem que diferente do que estamos acostumados, eu não precisei instanciar nossa classe `Matematica` em uma variável e diretamente acessamos seus valores tal qual acessamos um `Objeto`.
+
+Existe também uma variação chamada `Object`. Ela por sua vez precisa ter um nome `Object Nome`, e pode ter mais de uma dentro da mesma classe, diferente da `companion object` que só permite 1 por classe.
+
+Para acessa também é necessário utilizar do nome. Veja o exemplo a baixo
+
+
+``` kotlin
+class Matematica() {
+  
+    object numerosIrracionais{
+        val PI = 3.1415
+    }
+}
+
+fun main() {
+  
+    println(Matematica.numerosIrracionais.PI)
+
+}
+```
+
+É possível inicializar um objeto com `init`, mas ele executará a inicialização(`init{}`)` apenas na primeira vez em que for chamado.
+
+```kotlin
+class Matematica() {
+  
+    companion object {
+        val PI = 3.1415
+        fun inicializador(){
+            println("Fui inicializado")
+        }
+        
+        init {
+            inicializador()
+        }
+    }
+}
+
+fun main() {
+    println(Matematica.PI)
+    
+    //chamando novamente para ver se ele exibe a mensagem do ("Fui inicializado")
+	println(Matematica.PI)//não exibe
+}
+
+```
+https://pl.kotl.in/EFCiQzs7g
+
 ## Classes abstratas
 
 ## Interfaces
