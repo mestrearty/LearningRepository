@@ -310,6 +310,35 @@ Mas agora, cada treinador terá o seu jeito de `Treinar` e `Batalhar`. Então qu
 
 Vejamos em código:
 
+```kotlin
+interface Treinador {
+    var qdtInsignias: Int
+	fun capturar()
+    fun batalhar(pokemon:String)
+  
+}
+
+class Pessoa (val nome: String): Treinador{
+   override var qdtInsignias=0
+   override fun capturar(){
+       println("$nome de $qdtInsignias insígneas está jogando uma Pokébola!")
+   }
+   
+   override fun batalhar(pokemon:String){
+       println("$pokemon eu escolho você!")
+   }
+}
+
+fun main() {
+ val treinador = Pessoa("Ash")
+ treinador.qdtInsignias = 2
+ treinador.capturar()
+ treinador.batalhar("Pikachu")
+}
+
+```
+
+Definimos com o prefisso `interface` o que será o nosso contrato. Definimos tudo dentro dele do que deverá ser implementado. Quando pegamos nossa classe `Pessoa` e dizemos que ela implementara `Treinador`, somos obrigados com o `override` implementar todos os métodos e atributos.
 
 https://pl.kotl.in/Nr55r_xuh
 
