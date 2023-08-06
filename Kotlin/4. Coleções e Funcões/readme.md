@@ -14,8 +14,8 @@ Diferente dos outros tópicos da pasta [Kotlin](../../Kotlin/) em que temos no `
 Para acessar os arquivos explore este diretório ou clique no tópico desejado a baixo:
 
 [1.List.kt](./1.List.kt) - [Play Kotlin](https://pl.kotl.in/xjzbqxfgn)
-[2.Set.kt](./2.Set.kt) - [Play Kotlin]()
-[3.Map.kt](./3.Map.kt) -[Play Kotlin]()
+[2.Set.kt](./2.Set.kt) - [Play Kotlin](https://pl.kotl.in/CeO22rWQY)
+[3.Map.kt](./3.Map.kt) -[Play Kotlin](https://pl.kotl.in/ThFdVBq9a)
 [4.Any&Count.kt](./4.Any&Count.kt) -[Play Kotlin]()
 [5.First&Last.kt](./5.First&Last.kt) -[Play Kotlin]()
 [6.Sum&SumOf.kt](./6.Sum&SumOf.kt) -[Play Kotlin]()
