@@ -11,7 +11,6 @@ Sumário
   - [Classes abstratas](#classes-abstratas)
   - [Interfaces](#interfaces)
   - [Polimorfismo](#polimorfismo)
-  - [Classe anônima](#classe-anônima)
 
 ---
 
@@ -53,7 +52,7 @@ Mas atenção, como podemos ver em Kotlin é preciso sinalizar que uma classe po
 ```kotlin
 class NomeClasse(parametro: Tipo):NomeClassePai(parametro){}
 ```
-https://pl.kotl.in/eRfm2ocpp
+Exmeplo do código para executar: [1.Heranca.kt](./1.Heranca.kt) ou direto do [Play Kotlin](https://pl.kotl.in/eRfm2ocpp)
 
 ## Modificadores de Visibilidade
 As classes possuem modificadores que definem quem poderão as ver ou ver seus métodos e atributos. Esses modificadores são bem famosos em diversas linguagens, e eles são `Public, Protected e Private`.
@@ -104,7 +103,7 @@ Por padrão classes e seus métodos são sempre Públicos, mas atributos privado
 
 Note também que `computador` não consegue em momento algum chamar o método `ativarcorrente()`. Por ser privado, apenas a própria passe pai consegue a utilizar, e deve ser inclusive dentro da própria classse. 
 
-https://pl.kotl.in/KMG1OMokZ
+Exmeplo do código para executar: [2.Visibilidade.kt](./2.Visibilidade.kt) ou direto do [Play Kotlin](https://pl.kotl.in/KMG1OMokZ)
 
 ## Sobrescrita (Override)
 Em algum momento a classe filha pode precisar realizar um método que herda do seu pai, mas com alguma diferença. É importante então que o filho seja capaz de fazer do seu jeito, mas sem quebrar a forma que herdou de seu pai. Para isso utilizamos o "Override", ou "Sobrescrita".
@@ -154,7 +153,7 @@ No código a cima podemos perceber que nosso computador sobrescere o método `li
 Vale ressaltar que para podermos sobrescrever um método precisamos inserir o prefixo `open` na função. Caso não o façamos, o método por padrão estará protegido para modificações. Isso é útil em nível de segurança. Já pensou em um sistema de bancário pudermos alterar métodos que aplicam juros sobre esmpréstimos para zero? Seria o crime!
 
 
-https://pl.kotl.in/9rNIjh5Q0
+Exmeplo do código para executar: [3.Sobrescrita.kt](./3.Sobrescrita.kt) ou direto do [Play Kotlin](https://pl.kotl.in/9rNIjh5Q0)
 
 ## Sobrecarga (Overload)
 Por mais diferente que possa ser, no kotlin é possível que tenhamos 2 ou mais funções com o mesmo nome, mas como e por que isso é possível?
@@ -190,7 +189,7 @@ fun main() {
 
 Perceba que no código temos 3 métodos `ligarLed()` exatamente com o mesmo nome, mas como recebem parâmetros diferentes, o compilador entende que não são a mesma coisa, e assim na hora de ser utilizada, como todas realizam a mesma ação mas comportamentos diferentes, você pode chamar a que melhor se adéqua ou o próprio método será chamado de acordo com o parâmetro passado. 
 
-https://pl.kotl.in/oVs8cX5CW
+Exmeplo do código para executar: [4.Sobrecarga.kt](./4.Sobrecarga.kt) ou direto do [Play Kotlin](https://pl.kotl.in/oVs8cX5CW)
 ## Object e companion object
 
 Métodos e atributos estáticos são capazes de serem acessados de uma classe sem que eles sejam instânciados.
@@ -259,7 +258,7 @@ fun main() {
 }
 
 ```
-https://pl.kotl.in/EFCiQzs7g
+Exmeplo do código para executar: [5.Object.kt](./5.Object.kt) ou direto do [Play Kotlin](https://pl.kotl.in/EFCiQzs7g)
 
 ## Classes abstratas
 Nem tudo que um pai passa para seus filhos, os filhos farão da mesma forma. Para entendermos classes abstratas vamos pensar na classe pai `Mamifero`. Essa classe passa os métodos `Acordar`, `Dormir` e `Falar`. 
@@ -299,7 +298,7 @@ fun main() {
 ```
 
 Veja que precisamos inserir na classe e no método que será abstrado o prefixo `abstract`. Perceba também que chamamos os métodos já implementados em `Mamiferos` além do nosso `override` do `falar()`.
-https://pl.kotl.in/u3tnmxzlT
+Exmeplo do código para executar: [6.Abstracao.kt](./6.Abstracao.kt) ou direto do [Play Kotlin](https://pl.kotl.in/u3tnmxzlT)
 
 ## Interfaces
 Imagine que exista um contrato que permite você ser um `treinador` Pokemon. Sem esse contrato você não pode ser um `treinador`. Então, você que quer ser um treinador deve assinar esse contrato. Nesse contrato vai dizer o que você pode fazer (métodos) e quais são seus atributos como `treinador`.   
@@ -340,7 +339,7 @@ fun main() {
 
 Definimos com o prefisso `interface` o que será o nosso contrato. Definimos tudo dentro dele do que deverá ser implementado. Quando pegamos nossa classe `Pessoa` e dizemos que ela implementara `Treinador`, somos obrigados com o `override` implementar todos os métodos e atributos.
 
-https://pl.kotl.in/Nr55r_xuh
+Exmeplo do código para executar: [7.Interface.kt](./7.Interface.kt) ou direto do [Play Kotlin](https://pl.kotl.in/Nr55r_xuh)
 
 ## Polimorfismo
 Quem curte quadrinhos, mais especificamente X-man deve relembrar da mutante toda azul, a Mistica, uma polimorfa. Nossa mutante tinha o super poder de virar quem ela quisesse. Se comportar como aquela outra pessoa, mesmo ela não sendo. Mas reparem, ela só conseguia imitar outra pessoa, e não outros animais. Além disso ela só podia fazer o que uma pessoa fazia, ela não imitava os métodos únicos de um mutante como o do Magneto de controlar metal.
@@ -394,6 +393,4 @@ fun main() {
 
 Reparem que nossa função `mostrarBonus()` recebe como parâmetro uma propriedade do tipo `Funcionario`, e dentro da nossa `main()` a chamamos 2 vezes, uma passando um `analista` e outra passando um `gerente`, e ela executa, pois ambos são `Funcionario`s, e dentro da função Mística `mostrarBonus` só trabalhamos com parâmetros e métodos que sabemos que nosso polimorfo é capaz de executar, pois pertence a `Funcionário`s.
 
-https://pl.kotl.in/tpmUCiV6p
-
-## Classe anônima
+Exmeplo do código para executar: [8.Polimorfismo.kt](./8.Polimorfismo.kt) ou direto do [Play Kotlin](https://pl.kotl.in/tpmUCiV6p)
