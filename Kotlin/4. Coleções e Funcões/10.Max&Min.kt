@@ -11,8 +11,9 @@ fun main() {
     println(numeros.maxOf{it})
     
     println(pokemon)
-    println("Pokémon de menor número na dex: ${pokemon.minOf{it.dex}}")
- 
+    println("A dex do Pokémon de menor número na dex: ${pokemon.minOf{it.dex}}") // retorna apenas a propriedade
+    println("Pokémon de menor número na dex: ${pokemon.minByOrNull{it.dex}}") // retorna o objeto inteiro
+
 }
 
 fun geraDados(): List<Pokemon> {
