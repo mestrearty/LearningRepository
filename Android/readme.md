@@ -3,7 +3,7 @@
 O desenvolvimento de aplicaçãoes Android são divididos em 2 grupos, a parte de interface gráfica o Layout em `xml` e a parte lógica em `Kotlin` ou `Java`.
 
 ## Android Layout
-
+[Colinhas](./layouts.md)  
 O Layout de fine a estrutura da interface gráfica e como os elementos se comportam e se relacionam. Todos esses elementos dentro do layout respeitam a hierarquia de `View` e `View Group`.
 
 - `View`: Geralmente representam elementos na interface que o usuário possa interagir. (Button, EditText, Switch, ImageView,CheckBox)
@@ -80,3 +80,18 @@ Lembre-se, dispositivos diversos possuem número de pixels, resoluções e taman
     certo: <Button/>
     errado: <button/>
     ```
+
+    [Fonte: @DevMasterTeam](https://github.com/DevMasterTeam/Udemy-Andorid-Kotlin/blob/master/Secao%2019%20-%20Layout%20Linear%20Elementos/(Slide)%20Conceitos%20e%20defini%C3%A7%C3%B5es%20de%20Layout.pdf)
+
+
+## PX, SP e DP
+#### px
+Correspondente ao número de pixels da tela USO: evite utilizar px para tudo, apenas em casos bem específicos é recomendada.
+
+#### sp
+(Scale-independent Pixels) Idem ao dp, mas também considera o tamanho da fonte que o usuário está utilizando. É recomendado que use essa unidade quando especificar o tamanho de uma fonte, para que esta seja automaticamente ajustada conforme as preferências da tela do usuário. USO: Sempre utilize sp para fontes!
+
+#### dip ou dp
+(Density-independent Pixels) Essa unidade é relativa à resolução da tela. Por exemplo se a resolução da tela é de 160 dpi, significa que um dp representa 1 pixel em um total de 160. USO: aconselho ao invés de usar o px sempre use o dp.
+
+Fonte: https://pt.stackoverflow.com/questions/295/qual-a-diferen%C3%A7a-entre-px-dp-dip-and-sp
