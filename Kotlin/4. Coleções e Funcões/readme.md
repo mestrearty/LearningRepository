@@ -16,7 +16,7 @@ Para acessar os arquivos explore este diretório ou clique no tópico desejado a
 [1.List.kt](./1.List.kt) - [Play Kotlin](https://pl.kotl.in/xjzbqxfgn)
 [2.Set.kt](./2.Set.kt) - [Play Kotlin](https://pl.kotl.in/CeO22rWQY)
 [3.Map.kt](./3.Map.kt) -[Play Kotlin](https://pl.kotl.in/ThFdVBq9a)
-[4.Any&Count.kt](./4.Any&Count.kt) -[Play Kotlin]()
+[4.Any&Count.kt](./4.Any&Count.kt) -[Play Kotlin](https://pl.kotl.in/FVI044KZB)
 [5.First&Last.kt](./5.First&Last.kt) -[Play Kotlin]()
 [6.Sum&SumOf.kt](./6.Sum&SumOf.kt) -[Play Kotlin]()
 [7.Filter.kt](./7.Filter.kt) -[Play Kotlin]()
