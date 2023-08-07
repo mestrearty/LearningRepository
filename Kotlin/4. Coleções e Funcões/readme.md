@@ -21,7 +21,7 @@ Para acessar os arquivos explore este diretório ou clique no tópico desejado a
 [6.Sum&SumOf.kt](./6.Sum&SumOf.kt) -[Play Kotlin](https://pl.kotl.in/n4OwDSEZh)
 [7.Filter.kt](./7.Filter.kt) -[Play Kotlin](https://pl.kotl.in/JzmQ7OMa-)
 [8.Take&TakeLast.kt](./8.Take&TakeLast.kt) -[Play Kotlin](https://pl.kotl.in/DD-OWCbyG)
-[9.forEach.kt](./9.forEach.kt) -[Play Kotlin]()
+[9.forEach.kt](./9.forEach.kt) -[Play Kotlin](https://pl.kotl.in/o7fU5pmn8)
 [10.Max&Min.kt](./10.Max&Min.kt) -[Play Kotlin]()
 [11.Map.kt](./11.Map.kt) -[Play Kotlin]()
 [12.Average.kt](./12.Average.kt) -[Play Kotlin]()
