@@ -95,3 +95,62 @@ Correspondente ao número de pixels da tela USO: evite utilizar px para tudo, ap
 (Density-independent Pixels) Essa unidade é relativa à resolução da tela. Por exemplo se a resolução da tela é de 160 dpi, significa que um dp representa 1 pixel em um total de 160. USO: aconselho ao invés de usar o px sempre use o dp.
 
 Fonte: https://pt.stackoverflow.com/questions/295/qual-a-diferen%C3%A7a-entre-px-dp-dip-and-sp
+
+
+## Padrões
+
+### Idioma
+Inglês  
+### Ponto vírgula
+Não utilizar
+
+### Nomenclatura 
+* CamelCase: 
+  * Variáveis
+  * Métodos
+  * Atributos de classe
+  * Parâmeros
+* PascalCase:
+  * Classes
+
+### Ordem de Declaração
+* Classes
+  * Variáveis de escopo da classe
+  * Construtores secundários
+  * Objects e Conpanion objects
+  * Override
+  * Métodos com sobrecarga
+  * 
+* Constantes (const):
+  * Caixa alta
+  * Separado por "_"
+  * Definidas no início fora da classe com "val"
+  * Ex: const val ITEM_KEY
+  
+### Activities e Layout
+| _Componente_ 	| _Classe_             	| _Nome do Layout_       	|
+|--------------	|----------------------	|------------------------	|
+| Activity     	| UserProfileActivity  	| activity_user_profile  	|
+| Fragment     	| SignUpFragment       	| fragment_sign_up       	|
+| Dialog       	| ChangePasswordDialog 	| dialog_change_password 	|
+
+### Arquivos XML
+Quando um elemento não tiver nenhum conteúdo dentro das tags, deve-se usar **self closing** tags.
+```xml
+<TextView android:id="@+id/text_name/>
+```
+
+### Identificadores de elementos
+| _Elemento_ 	| _Prefixo_                	|
+|------------	|--------------------------	|
+| TextView   	| UserProfileActivitytext_ 	|
+| EditText   	| edit_                    	|
+| Button     	| button_                  	|
+| ImageView  	| image_                   	|
+| Menu       	| menu_                    	|
+
+
+```xml
+<TextView android:id="@+id/text_name/>
+```
+Capítulo retirado de: https://github.com/DevMasterTeam/Udemy-Andorid-Kotlin/blob/master/Secao%2021%20-%20Convencoes%20de%20codigo/(Artigo)%20Conven%C3%A7%C3%B5es%20de%20c%C3%B3digo.pdf
