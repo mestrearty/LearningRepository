@@ -12,5 +12,5 @@ View capable of calculating the cost of a trip passing the Distance, Price and A
 
 Prints:
 
-![Clean App](../AppsPrints/Gasto%20Viagem/Clean.jpg)
-![Filled App](../AppsPrints/Gasto%20Viagem/Filled.jpg)
+
+<img src="../AppsPrints/Gasto%20Viagem/Clean.jpg" width="128"/> <img src="../AppsPrints/Gasto%20Viagem/Filled.jpg" width="128"/>
