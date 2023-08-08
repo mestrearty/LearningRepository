@@ -1,0 +1,3 @@
+com.example.gastoviagem.test
+style WhiteBackgroundDialogTheme
+style WhiteBackgroundTheme
