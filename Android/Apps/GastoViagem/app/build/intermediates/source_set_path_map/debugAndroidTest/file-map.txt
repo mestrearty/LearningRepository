@@ -1,6 +1,0 @@
-com.example.gastoviagem.test.app-annotation-experimental-1.3.0-0 C:\Users\pe-ri\.gradle\caches\transforms-3\156cd98c8df8c674596f4d359e6f12f0\transformed\annotation-experimental-1.3.0\res
-com.example.gastoviagem.test.app-core-1.5.0-1 C:\Users\pe-ri\.gradle\caches\transforms-3\3254e0222be35c024714981475056430\transformed\core-1.5.0\res
-com.example.gastoviagem.test.app-androidTest-2 C:\Users\pe-ri\Documents\Codes\LearningRepository\Android\Projetinhos\app\build\generated\res\resValues\androidTest\debug
-com.example.gastoviagem.test.app-mergeDebugAndroidTestResources-3 C:\Users\pe-ri\Documents\Codes\LearningRepository\Android\Projetinhos\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
-com.example.gastoviagem.test.app-mergeDebugAndroidTestResources-4 C:\Users\pe-ri\Documents\Codes\LearningRepository\Android\Projetinhos\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
-com.example.gastoviagem.test.app-merged_res-5 C:\Users\pe-ri\Documents\Codes\LearningRepository\Android\Projetinhos\app\build\intermediates\merged_res\debugAndroidTest

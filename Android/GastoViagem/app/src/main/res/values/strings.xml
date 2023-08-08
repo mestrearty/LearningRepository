@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Gasto Viagem</string>
+    <string name="authonomy">Autonomia</string>
+    <string name="price">Preço</string>
+    <string name="distance">Distância</string>
+    <string name="total_cost">R$ 0</string>
+    <string name="validation_fill_all_fields">Por favor, preencha todos os campos!</string>
+    <string name="header_title">Custo de Viagem</string>
+    <string name="header_distance">Distância</string>
+    <string name="subtitle_total_km">Total de quilômetros</string>
+    <string name="header_price">Preço</string>
+    <string name="header_authonomy">Autonomia do seu veículo</string>
+    <string name="subtitle_price">Preço por Litro</string>
+    <string name="subtitle_authonomy">KMs por Litro</string>
+    <string name="button_calculate">CALCULAR</string>
+    <string name="title_total_cost">Seu gasto total será de:</string>
+</resources>
