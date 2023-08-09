@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Base.Theme.Motivation" parent="Theme.Material3.DayNight.NoActionBar">
+        
+        <item name="colorPrimary">@color/dark_purple</item>
+        <item name="colorPrimaryVariant">@color/dark_purple</item>
+
+    </style>
+</resources>

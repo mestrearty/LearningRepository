@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "com.example.motivation.app-mergeDebugResources-27:/layout/activity_user.xml",
+        "source": "com.example.motivation.app-main-30:/layout/activity_user.xml"
+    },
+    {
+        "merged": "C:\\Users\\pe-ri\\.gradle\\daemon\\8.0\\com.example.motivation.app-mergeDebugResources-27:\\layout\\activity_user_login.xml",
+        "source": "C:\\Users\\pe-ri\\.gradle\\daemon\\8.0\\com.example.motivation.app-main-30:\\layout\\activity_user_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\pe-ri\\.gradle\\daemon\\8.0\\com.example.motivation.app-mergeDebugResources-27:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\pe-ri\\.gradle\\daemon\\8.0\\com.example.motivation.app-main-30:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\pe-ri\\.gradle\\daemon\\8.0\\com.example.motivation.app-mergeDebugResources-27:\\layout\\activity_user.xml",
+        "source": "C:\\Users\\pe-ri\\.gradle\\daemon\\8.0\\com.example.motivation.app-main-30:\\layout\\activity_user.xml"
+    },
+    {
+        "merged": "com.example.motivation.app-mergeDebugResources-27:/layout/activity_main.xml",
+        "source": "com.example.motivation.app-main-30:/layout/activity_main.xml"
+    }
+]

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="dark_purple">#800D71</color>
+    <color name="general_white_background">#EDEFEE</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="app_name">Motivation</string>
+    <string name="text_button_save">Começar</string>
+    <string name="text_center_mensage">Riscos devem ser corridos, porque o maior perigo é não arriscar nada!</string>
+    <string name="text_new_frase">Nova Frase</string>
+    <string name="text_top">Vamos Começar?</string>
+    <string name="validation_mandatory_name">Por favor digíte um nome válido</string>
+    <style name="Base.Theme.Motivation" parent="Theme.Material3.DayNight.NoActionBar">
+        
+        <item name="colorPrimary">@color/dark_purple</item>
+        <item name="colorPrimaryVariant">@color/dark_purple</item>
+    </style>
+    <style name="Theme.Motivation" parent="Base.Theme.Motivation"/>
+</resources>
