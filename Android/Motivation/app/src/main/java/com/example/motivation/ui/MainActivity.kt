@@ -7,6 +7,7 @@ import android.widget.ImageView
 import androidx.core.content.ContextCompat
 import com.example.motivation.infra.MotivationConstants
 import com.example.motivation.R
+import com.example.motivation.data.Mock
 import com.example.motivation.infra.SecurityPreferences
 import com.example.motivation.databinding.ActivityMainBinding
 
@@ -27,6 +28,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         handleUserName()
         handleImageFilter(binding.imageViewStars)
 
+        //Setting a randon starter phrase
+        generatePhrase()
+
         //Click Events
         binding.buttonNewFrase.setOnClickListener(this)
         binding.imageViewHappy.setOnClickListener(this)
@@ -37,7 +41,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     override fun onClick(view: View) {
         when (view.id) {
             R.id.button_new_frase -> {
-                binding.textUserName.text = activeCategory.toString()
             }
 
             R.id.imageView_stars -> {
@@ -55,6 +58,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 activeCategory = MotivationConstants.ACTIVE_CATEGORY.SUNNY
             }
         }
+        generatePhrase()
     }
 
     private fun handleUserName() {
@@ -75,4 +79,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         binding.imageViewHappy.setColorFilter(black)
     }
 
+    private fun generatePhrase(){
+        val mock = Mock()
+        val phrase = mock.getPhrase(activeCategory)
+        binding.textCenterMessage.text = phrase
+    }
 }
