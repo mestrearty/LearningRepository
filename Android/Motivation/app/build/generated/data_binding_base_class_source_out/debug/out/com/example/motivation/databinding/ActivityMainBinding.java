@@ -27,13 +27,13 @@ public final class ActivityMainBinding implements ViewBinding {
   public final Button buttonNewFrase;
 
   @NonNull
-  public final ImageView imageViewOne;
+  public final ImageView imageViewHappy;
 
   @NonNull
-  public final ImageView imageViewThree;
+  public final ImageView imageViewStars;
 
   @NonNull
-  public final ImageView imageViewTwo;
+  public final ImageView imageViewSunny;
 
   @NonNull
   public final RelativeLayout relativeLayoutMensagePageFather;
@@ -48,15 +48,15 @@ public final class ActivityMainBinding implements ViewBinding {
   public final TextView textUserName;
 
   private ActivityMainBinding(@NonNull LinearLayout rootView, @NonNull Button buttonNewFrase,
-      @NonNull ImageView imageViewOne, @NonNull ImageView imageViewThree,
-      @NonNull ImageView imageViewTwo, @NonNull RelativeLayout relativeLayoutMensagePageFather,
+      @NonNull ImageView imageViewHappy, @NonNull ImageView imageViewStars,
+      @NonNull ImageView imageViewSunny, @NonNull RelativeLayout relativeLayoutMensagePageFather,
       @NonNull TextView textCenterMessage, @NonNull EditText textEmailLoggin,
       @NonNull TextView textUserName) {
     this.rootView = rootView;
     this.buttonNewFrase = buttonNewFrase;
-    this.imageViewOne = imageViewOne;
-    this.imageViewThree = imageViewThree;
-    this.imageViewTwo = imageViewTwo;
+    this.imageViewHappy = imageViewHappy;
+    this.imageViewStars = imageViewStars;
+    this.imageViewSunny = imageViewSunny;
     this.relativeLayoutMensagePageFather = relativeLayoutMensagePageFather;
     this.textCenterMessage = textCenterMessage;
     this.textEmailLoggin = textEmailLoggin;
@@ -96,21 +96,21 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.imageView_one;
-      ImageView imageViewOne = ViewBindings.findChildViewById(rootView, id);
-      if (imageViewOne == null) {
+      id = R.id.imageView_happy;
+      ImageView imageViewHappy = ViewBindings.findChildViewById(rootView, id);
+      if (imageViewHappy == null) {
         break missingId;
       }
 
-      id = R.id.imageView_three;
-      ImageView imageViewThree = ViewBindings.findChildViewById(rootView, id);
-      if (imageViewThree == null) {
+      id = R.id.imageView_stars;
+      ImageView imageViewStars = ViewBindings.findChildViewById(rootView, id);
+      if (imageViewStars == null) {
         break missingId;
       }
 
-      id = R.id.imageView_two;
-      ImageView imageViewTwo = ViewBindings.findChildViewById(rootView, id);
-      if (imageViewTwo == null) {
+      id = R.id.imageView_sunny;
+      ImageView imageViewSunny = ViewBindings.findChildViewById(rootView, id);
+      if (imageViewSunny == null) {
         break missingId;
       }
 
@@ -138,8 +138,8 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityMainBinding((LinearLayout) rootView, buttonNewFrase, imageViewOne,
-          imageViewThree, imageViewTwo, relativeLayoutMensagePageFather, textCenterMessage,
+      return new ActivityMainBinding((LinearLayout) rootView, buttonNewFrase, imageViewHappy,
+          imageViewStars, imageViewSunny, relativeLayoutMensagePageFather, textCenterMessage,
           textEmailLoggin, textUserName);
     }
     String missingId = rootView.getResources().getResourceName(id);

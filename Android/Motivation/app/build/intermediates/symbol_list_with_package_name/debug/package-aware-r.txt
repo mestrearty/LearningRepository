@@ -3230,9 +3230,9 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
-id imageView_one
-id imageView_three
-id imageView_two
+id imageView_happy
+id imageView_stars
+id imageView_sunny
 id immediateStop
 id included
 id indeterminate

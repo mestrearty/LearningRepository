@@ -3229,9 +3229,9 @@ int id ifRoom 0x7f0800d7
 int id ignore 0x7f0800d8
 int id ignoreRequest 0x7f0800d9
 int id image 0x7f0800da
-int id imageView_one 0x7f0800db
-int id imageView_three 0x7f0800dc
-int id imageView_two 0x7f0800dd
+int id imageView_happy 0x7f0801f9
+int id imageView_stars 0x7f0801fa
+int id imageView_sunny 0x7f0801fb
 int id immediateStop 0x7f0800de
 int id included 0x7f0800df
 int id indeterminate 0x7f0800e0

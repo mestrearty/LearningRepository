@@ -16,8 +16,7 @@
         android:background="@color/dark_purple">
 
         <ImageView
-            app:tint="@color/white"
-            android:id="@+id/imageView_one"
+            android:id="@+id/imageView_stars"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_gravity="center"
@@ -25,8 +24,7 @@
             app:srcCompat="@drawable/img_awsome" />
 
         <ImageView
-            app:tint="@color/white"
-            android:id="@+id/imageView_two"
+            android:id="@+id/imageView_happy"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_gravity="center"
@@ -34,8 +32,7 @@
             app:srcCompat="@drawable/img_smile" />
 
         <ImageView
-            app:tint="@color/white"
-            android:id="@+id/imageView_three"
+            android:id="@+id/imageView_sunny"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_gravity="center"

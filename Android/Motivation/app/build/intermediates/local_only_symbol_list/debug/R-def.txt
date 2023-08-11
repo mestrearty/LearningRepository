@@ -14,9 +14,9 @@ drawable text_all_infinity
 id button_new_frase
 id button_save
 id edit_text_user_name
-id imageView_one
-id imageView_three
-id imageView_two
+id imageView_happy
+id imageView_stars
+id imageView_sunny
 id relative_layout_mensage_page_father
 id text_center_message
 id text_email_loggin
