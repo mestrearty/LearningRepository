@@ -10,6 +10,7 @@ import com.example.motivation.R
 import com.example.motivation.data.Mock
 import com.example.motivation.infra.SecurityPreferences
 import com.example.motivation.databinding.ActivityMainBinding
+import java.util.Locale
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var binding: ActivityMainBinding
@@ -63,7 +64,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     private fun handleUserName() {
         binding.textUserName.text =
-            "Olá, ${SecurityPreferences(this).getString(MotivationConstants.KEY.USER_NAME)}!"
+            "${getString(R.string.text_hello)} ${SecurityPreferences(this).getString(MotivationConstants.KEY.USER_NAME)}!"
     }
 
     private fun handleImageFilter(image: ImageView) {
@@ -81,7 +82,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     private fun generatePhrase(){
         val mock = Mock()
-        val phrase = mock.getPhrase(activeCategory)
+        val language = Locale.getDefault().toString()
+        val phrase = mock.getPhrase(activeCategory,language)
         binding.textCenterMessage.text = phrase
     }
 }

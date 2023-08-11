@@ -3868,6 +3868,8 @@ int string side_sheet_behavior 0x7f0f009d
 int string status_bar_notification_info_overflow 0x7f0f009e
 int string text_button_save 0x7f0f00a2
 int string text_center_mensage 0x7f0f009f
+int string text_hello 0x7f0f00a4
+int string text_name_input 0x7f0f00a5
 int string text_new_frase 0x7f0f00a0
 int string text_top 0x7f0f00a1
 int string validation_mandatory_name 0x7f0f00a3

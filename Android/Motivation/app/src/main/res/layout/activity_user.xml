@@ -28,11 +28,11 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:layout_marginHorizontal="10dp"
-        android:hint="Qual seu nome?"
+        android:hint="@string/text_name_input"
         android:outlineAmbientShadowColor="@color/black"
         android:outlineSpotShadowColor="@color/black"
-        android:textAlignment="center"
 
+        android:textAlignment="center"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
         android:textSize="20sp" />

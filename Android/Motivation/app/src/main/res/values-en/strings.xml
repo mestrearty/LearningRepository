@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Motivation</string>
+    <string name="text_center_mensage">Let`s go to the jungle baby!</string>
+    <string name="text_new_frase">New phrase</string>
+    <string name="text_top">Let`s Start?</string>
+    <string name="text_button_save">Start</string>
+    <string name="validation_mandatory_name">Please, type a valid value</string>
+    <string name="text_hello">Hello, </string>
+    <string name="text_name_input">What is your name?</string>
+</resources>

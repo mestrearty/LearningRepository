@@ -7,6 +7,8 @@
     <string name="app_name">Motivation</string>
     <string name="text_button_save">Começar</string>
     <string name="text_center_mensage">Riscos devem ser corridos, porque o maior perigo é não arriscar nada!</string>
+    <string name="text_hello">Olá, </string>
+    <string name="text_name_input">Qual seu nome?</string>
     <string name="text_new_frase">Nova Frase</string>
     <string name="text_top">Vamos Começar?</string>
     <string name="validation_mandatory_name">Por favor digíte um nome válido</string>

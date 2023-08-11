@@ -29,6 +29,8 @@ mipmap ic_launcher_round
 string app_name
 string text_button_save
 string text_center_mensage
+string text_hello
+string text_name_input
 string text_new_frase
 string text_top
 string validation_mandatory_name

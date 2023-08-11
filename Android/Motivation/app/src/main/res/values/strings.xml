@@ -5,4 +5,6 @@
     <string name="text_top">Vamos Começar?</string>
     <string name="text_button_save">Começar</string>
     <string name="validation_mandatory_name">Por favor digíte um nome válido</string>
+    <string name="text_hello">Olá, </string>
+    <string name="text_name_input">Qual seu nome?</string>
 </resources>

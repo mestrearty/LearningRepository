@@ -56,7 +56,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="54dp"
                 android:gravity="center_horizontal"
-                android:text="Olá, Kotlin!"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
