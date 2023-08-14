@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">ConstraintLayoutLogin</string>
+    <string name="email_input_text">Email</string>
+    <string name="password_input_text">Senha</string>
+    <string name="button_login">LOGIN</string>
+</resources>
