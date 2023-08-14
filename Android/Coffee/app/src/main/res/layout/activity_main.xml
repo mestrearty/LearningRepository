@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EDEDED"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/text_header"
+        android:layout_width="0dp"
+        android:layout_height="130dp"
+        android:background="@color/coffee"
+        android:gravity="center"
+        android:text="@string/cappuccino_title"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_margin="16dp"
+        app:layout_constraintStart_toStartOf="@+id/text_header"
+        app:layout_constraintTop_toTopOf="@+id/text_header"
+        app:srcCompat="@drawable/arrow_back" />
+
+    <ImageView
+        android:id="@+id/image_view_clock"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/image_view_heart_likes"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_header"
+        app:srcCompat="@drawable/baseline_access_time_24" />
+
+    <ImageView
+        android:id="@+id/image_view_heart_likes"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/image_view_clock"
+        app:layout_constraintTop_toTopOf="@+id/image_view_clock"
+        app:srcCompat="@drawable/favorite_heart"
+
+        />
+
+    <TextView
+        android:id="@+id/text_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_timer"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@id/image_view_clock"
+        app:layout_constraintStart_toStartOf="@id/image_view_clock"
+        app:layout_constraintTop_toBottomOf="@id/image_view_clock" />
+
+    <TextView
+        android:id="@+id/text_like"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_like"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@id/image_view_heart_likes"
+        app:layout_constraintStart_toStartOf="@id/image_view_heart_likes"
+        app:layout_constraintTop_toBottomOf="@id/image_view_heart_likes" />
+
+    <View
+        android:id="@+id/view_separator"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_margin="16dp"
+        android:background="@color/coffee"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_timer" />
+
+    <TextView
+        android:id="@+id/text_recipe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:text="@string/cappuccino_recipe"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_separator"
+        tools:ignore="InvalidId" />
+
+    <TextView
+        android:id="@+id/text_recipe_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Ingredientes"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/view_separator"
+        app:layout_constraintTop_toBottomOf="@+id/text_recipe" />
+
+    <ImageView
+        android:id="@+id/image_ingredient1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:src="@drawable/baseline_chevron_right_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_recipe_title"
+        app:tint="#855E53" />
+
+
+    <TextView
+        android:id="@+id/text_ingridient1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1 dose espresso"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/image_ingredient1"
+        app:layout_constraintTop_toTopOf="@id/image_ingredient1" />
+
+    <ImageView
+        android:id="@+id/image_ingredient2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:src="@drawable/baseline_chevron_right_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image_ingredient1"
+        app:tint="#855E53" />
+
+    <TextView
+        android:id="@+id/text_ingridient2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="100ml leite"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/image_ingredient2"
+        app:layout_constraintTop_toTopOf="@id/image_ingredient2" />
+
+
+    <ImageView
+        android:id="@+id/image_ingredient3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:src="@drawable/baseline_chevron_right_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image_ingredient2"
+        app:tint="#855E53" />
+
+    <TextView
+        android:id="@+id/text_ingridient3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1 colher de chocolate em pó"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/image_ingredient3"
+        app:layout_constraintTop_toTopOf="@id/image_ingredient3" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

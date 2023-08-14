@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Coffee</string>
+    <string name="cappuccino_title">Cappuccino</string>
+    <string name="text_timer">15 minutos</string>
+    <string name="text_like">3248</string>
+    <string name="cappuccino_recipe">Uma simples e perfeitamente extraída dose de espresso misturado com leite fresco e chocolate fazem esta bebida deliciosa.</string>
+</resources>
