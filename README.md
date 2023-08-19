@@ -5,6 +5,7 @@ A principal intenção com a criação deste é de exercitar o git "manual" e cr
 Tecologias que serão inseridas aqui:
 
 ##### -> [Ajax](Ajax/)
+##### -> [Adroid](Android/)
 ##### -> [Bot Telegram](Telegram%20Bot/)
 ##### -> [CSS](CSS/)
 ##### -> [Design Patterns](Design%20Patterns/)
