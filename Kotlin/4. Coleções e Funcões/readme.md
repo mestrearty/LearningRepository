@@ -25,4 +25,6 @@ Para acessar os arquivos explore este diretório ou clique no tópico desejado a
 [10.Max&Min.kt](./10.Max&Min.kt) -[Play Kotlin](https://pl.kotl.in/2TlqsuzZo)
 [11.Map.kt](./11.Map.kt) -[Play Kotlin](https://pl.kotl.in/pjzggOj-i)
 [12.Average.kt](./12.Average.kt) -[Play Kotlin](https://pl.kotl.in/_5dVJ0fuz)
-[13.DistinctSortedReversed.kt](./13.DistinctSortedReversed.kt) -[Play Kotlin]()
+[13.DistinctSortedReversed.kt](./13.DistinctSortedReversed.kt) -[Play Kotlin](https://pl.kotl.in/zH72UugS8)
+[14.Iterators.kt](./14.Iterators.kt) -[Play Kotlin](https://pl.kotl.in/OGc6k_H9T)
+
