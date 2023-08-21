@@ -6,6 +6,8 @@ fun main() {
 
     println(saudacao(true))
     println(saudacaoReduzida(false))
+    
+    contem(2)
 }
 
 // funcionamento comum do If + Else
@@ -26,6 +28,13 @@ fun saudacao(dia: Boolean): String {
         "Bom dia"
     } else {
         "Boa noite"
+    }
+}
+
+// If verificando se contém
+fun contem(x:Int){
+    if (x in 1..5){
+        println("Seu número está entre 1 e 5")
     }
 }
 
